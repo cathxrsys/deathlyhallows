@@ -1,0 +1,203 @@
+LEGEND=Name color = performance cost: {G}green{R} = free, {Y}yellow{R} = small cost, {C}red{R} = heavy
+screen.LIGHTING=Lighting & Time of Day
+screen.SKY=Sky & Clouds
+screen.LIGHTS=Dynamic Light
+screen.EMISSIVE=Glowing Blocks & Mobs
+screen.WEATHER=Weather & Snow
+screen.WATER=Water & Ice
+screen.FOLIAGE=Foliage
+screen.DIMENSIONS=Nether & End
+screen.COLOR=Color
+screen.POST=Camera Effects
+screen.AA=Anti-Aliasing & Sharpness
+screen.HUD=Status & Interface
+
+NIGHT_BRIGHTNESS=Night Brightness
+NIGHT_BRIGHTNESS.comment=Brightness of the night sky, fog and moonlight on the world. 0 = pitch black night, only torches give light
+DAY_GLOOM=Day Gloom
+DAY_GLOOM.comment=Overcast daylight: dims the daytime sky and fog, deepens shadows in shaded places and mutes grass and leaf colors. 0 = normal bright day
+CAVE_LIGHT=Cave Daylight
+CAVE_LIGHT.comment=How much daylight reaches cave mouths, overhangs and spots under trees. 0 = they go almost black. Deep caves stay dark at any value
+TWILIGHT_STRENGTH=Twilight Tint
+TWILIGHT_STRENGTH.comment=Warm orange sunrise/sunset and blue dusk tint on the sky, fog and lighting. 0 = no tint
+TWILIGHT_LENGTH=Twilight Length
+TWILIGHT_LENGTH.comment=How long sunrise and sunset last. Lower = short and sharp, higher = longer and smoother transition between day and night
+
+CLOUDS=Clouds
+CLOUDS.comment=Still, dark gray overcast covering the whole sky, like on a long rainy day. Off = plain sky gradient
+CLOUD_DARKNESS=Cloud Darkness
+CLOUD_DARKNESS.comment=How dark the overcast sky and the fog are. Lower = lighter gray, higher = heavier and darker
+CLOUD_VARIATION=Cloud Variation
+CLOUD_VARIATION.comment=Large soft lighter and darker patches in the overcast. 0 = perfectly even gray
+CLOUD_HORIZON=Clear Horizon Band
+CLOUD_HORIZON.comment=Height in degrees above the horizon where the sky stays plain fog color without patches. Hides distant mountains at the render distance edge
+SKY_COOL=Sky Blue Tint
+SKY_COOL.comment=Cold blue tint of the overcast sky and fog. 0 = neutral gray, 1 = noticeably blue
+
+TORCH_FLICKER=Fire Flicker
+TORCH_FLICKER.comment=Light from torches, fires and lava gently flickers. Torches and lanterns held in hands flicker too. Lamps may flicker slightly as well, the shader cannot tell them apart
+FLICKER_STRENGTH=Flicker Strength
+FLICKER_STRENGTH.comment=How much the brightness wavers. Higher = stronger, more noticeable flicker
+FLICKER_SPEED=Flicker Speed
+FLICKER_SPEED.comment=How fast the light wavers. Lower = calm slow breathing, higher = nervous fast flicker
+HELD_LIGHT=Held Item Light
+HELD_LIGHT.comment=Torches, lanterns, glowstone and other glowing items light up the area around them: in your hands, in other mobs' hands, dropped on the ground and in item frames. Small FPS cost: every pixel checks the nearby light sources
+HELD_LIGHT_STRENGTH=Held Light Strength
+HELD_LIGHT_STRENGTH.comment=Brightness of the light from glowing items
+HELD_LIGHT_RADIUS=Held Light Radius
+HELD_LIGHT_RADIUS.comment=How far the light reaches compared to the item's light level. 1 = as far as a placed block of the same item
+PORTAL_LIGHT=Portal Light
+PORTAL_LIGHT.comment=The nearest nether portal casts real purple light onto blocks around it. Small FPS cost: lit pixels read the portal position from a buffer
+PORTAL_LIGHT_STRENGTH=Portal Light Strength
+PORTAL_LIGHT_STRENGTH.comment=Brightness of the purple light cast by the portal
+PORTAL_LIGHT_RADIUS=Portal Light Radius
+PORTAL_LIGHT_RADIUS.comment=How far the portal light reaches, in blocks
+PORTAL_FRAME_TINT=Portal Frame Tint
+PORTAL_FRAME_TINT.comment=Obsidian lit by a portal turns purple. Free, but obsidian lit by a torch or lava may get tinted too
+ORE_LIGHT=Ore Light
+ORE_LIGHT.comment=Ores cast colored light onto nearby blocks, mobs and held items. The light spreads around corners like vanilla light and does not pass through walls. Heavy: an extra compute pass every frame plus a light grid lookup per pixel. Off = no cost at all
+ORE_LIGHT_STRENGTH=Ore Light Strength
+ORE_LIGHT_STRENGTH.comment=Brightness of the colored light from ores
+ORE_LIGHT_RADIUS=Ore Light Radius
+ORE_LIGHT_RADIUS.comment=How many blocks the ore light spreads. Higher = more blocks to compute every frame = lower FPS
+ORE_LIGHT_DIST=Ore Light Distance
+ORE_LIGHT_DIST.comment=Distance in blocks around you where ore light is visible. It fades in smoothly as you approach. Higher = more blocks to compute every frame = lower FPS
+
+ORE_GLOW=Ore Glow
+ORE_GLOW.comment=How brightly the colored specks of ores glow in the dark (caves, night). 0 = ores look vanilla
+ORE_DAY_GLOW=Ore Daylight Glow
+ORE_DAY_GLOW.comment=Extra glow of ores in daylight so they stay visible on bright surfaces. 0 = same glow as in the dark
+ORE_FADE_DIST=Ore Glow Falloff Distance
+ORE_FADE_DIST.comment=Distance in blocks at which ore glow fades to its weakest (see Ore Far Glow)
+ORE_FAR_GLOW=Ore Far Glow
+ORE_FAR_GLOW.comment=Share of ore glow kept at the falloff distance and beyond. 0 = distant ores do not glow, 1 = no falloff
+REDSTONE_GLOW=Redstone Glow
+REDSTONE_GLOW.comment=Glow of redstone torches, powered redstone dust and other redstone parts. 0 = vanilla look
+PORTAL_GLOW=Nether Portal Glow
+PORTAL_GLOW.comment=Brightness of the purple glowing surface of nether portals. 0 = vanilla look
+MOB_EYES=Mob Eye Glow
+MOB_EYES.comment=Eyes of endermen, spiders and other mobs glow in the dark
+MOB_EYES_GLOW=Mob Eye Glow Strength
+MOB_EYES_GLOW.comment=How bright mob eyes are up close
+MOB_EYES_FADE_DIST=Mob Eye Falloff Distance
+MOB_EYES_FADE_DIST.comment=Distance in blocks at which eye glow fades to its weakest (see Mob Eye Far Glow)
+MOB_EYES_FAR_GLOW=Mob Eye Far Glow
+MOB_EYES_FAR_GLOW.comment=Eye brightness at the falloff distance compared to the plain texture. Below 1 = dimmer than vanilla, 1 = vanilla eyes
+
+RAIN_FOG=Rain Fog
+RAIN_FOG.comment=Extra haze that thickens during rain when you are outdoors. Render distance stays the same. 0 = no rain haze
+RAIN_SKY_DARKNESS=Rain Sky Darkness
+RAIN_SKY_DARKNESS.comment=How much darker the sky and fog get while it rains. 0 = same as in dry weather
+RAIN_OPACITY=Rain Opacity
+RAIN_OPACITY.comment=How visible raindrops and snowflakes are where they are lit
+RAIN_THINNESS=Rain Thinness
+RAIN_THINNESS.comment=Higher = thinner, more transparent raindrops. 0 = thick vanilla streaks
+RAIN_BRIGHTNESS=Rain Brightness
+RAIN_BRIGHTNESS.comment=Brightness of raindrops and splashes. Lower = darker, grayer drops, 1 = white in daylight. Drops near fire stay lit
+FOG_GLOW=Torch Glow in Fog
+FOG_GLOW.comment=Light of torches and fires scatters in the rain haze, making a warm halo around lit places. Visible only while it rains
+FOG_GLOW_STRENGTH=Torch Fog Glow Strength
+FOG_GLOW_STRENGTH.comment=Brightness of the warm halo around lights in rain haze
+LIGHTNING_BOLT=Branched Lightning
+LIGHTNING_BOLT.comment=Draws a procedural branching bolt in the sky instead of the vanilla one. Off = vanilla bolt
+LIGHTNING_STRENGTH=Lightning Light
+LIGHTNING_STRENGTH.comment=How strongly a lightning flash lights up the sky and the world. 0 = no flash
+SNOWIFY=Snowify World
+SNOWIFY.comment=Winter look: grass and leaves turn frosty white, top faces under the open sky get covered with snow. Snow melts near torches and lava. Overworld only
+SNOW_AMOUNT=Snow Amount
+SNOW_AMOUNT.comment=How strongly the world is covered with snow and frost
+SNOW_BRIGHTNESS=Snow Brightness
+SNOW_BRIGHTNESS.comment=How bright snow and frost are in daylight. 1 = pure white even under the overcast sky
+
+WATER_OPACITY=Water Opacity
+WATER_OPACITY.comment=Opacity of the water surface seen from above. Deeper water gets murkier on its own, so the bottom fades out with depth
+WATER_BRIGHTNESS=Water Brightness
+WATER_BRIGHTNESS.comment=Brightness of the dark gray water surface
+WATER_PATTERN=Water Surface Pattern
+WATER_PATTERN.comment=How much of the water texture shows through the murk when looking from above. 0 = flat murky water
+UNDERWATER_DENSITY=Underwater Fog Density
+UNDERWATER_DENSITY.comment=How quickly the dark blue murk swallows the view underwater and through the water surface. Higher = thicker, the bottom disappears sooner
+ICE_OPACITY=Ice Opacity
+ICE_OPACITY.comment=How opaque ice and frosted ice are. Lower = more transparent
+
+SWAY=Foliage Sway
+SWAY.comment=Leaves, grass, flowers and other plants sway in the wind
+SWAY_STRENGTH=Sway Strength
+SWAY_STRENGTH.comment=How far leaves and plants move
+SWAY_SPEED=Sway Speed
+SWAY_SPEED.comment=How fast leaves and plants move
+STORM_SWAY=Storm Sway
+STORM_SWAY.comment=How much rain and thunderstorms boost the sway speed and amplitude. 0 = weather has no effect
+
+NETHER_BRIGHTNESS=Nether Brightness
+NETHER_BRIGHTNESS.comment=Brightness of the Nether ambient light and fog. Only affects dark places: lava, fire and torches stay just as bright
+NETHER_HAZE=Nether Heat Haze
+NETHER_HAZE.comment=The distant view in the Nether shimmers like hot air above a fire. Nearby blocks and hands stay sharp. Small FPS cost, only in the Nether: one extra full screen pass with depth reads
+NETHER_HAZE_STRENGTH=Heat Haze Strength
+NETHER_HAZE_STRENGTH.comment=How far the shimmer bends the image
+NETHER_HAZE_DIST=Heat Haze Distance
+NETHER_HAZE_DIST.comment=Distance in blocks where the haze begins. It reaches full strength at 2.5 times this distance
+NETHER_HAZE_SPEED_MIN=Heat Haze Min Speed
+NETHER_HAZE_SPEED_MIN.comment=Slowest shimmer speed. The speed drifts smoothly between min and max like gusts of hot air. Set both equal for a constant speed
+NETHER_HAZE_SPEED_MAX=Heat Haze Max Speed
+NETHER_HAZE_SPEED_MAX.comment=Fastest shimmer speed during a gust
+END_BRIGHTNESS=End Brightness
+END_BRIGHTNESS.comment=Brightness of the End ambient light, sky and fog. Only affects dark places: torches stay just as bright
+
+DESATURATION=Desaturation
+DESATURATION.comment=Washes out the colors of the whole image. 0 = original colors, 1 = black and white
+NIGHT_DESATURATION=Dark Desaturation
+NIGHT_DESATURATION.comment=How much colors fade to cold gray in dark areas (night, caves, shadows). 0 = dark areas keep their colors
+HIGHLIGHT_BOOST=Night Highlight Boost
+HIGHLIGHT_BOOST.comment=Makes bright spots (fire, torches, lava) brighter at night so they stand out from the darkness. No effect during the day. Always on in the Nether and the End
+
+GLOW=Glow
+GLOW.comment=Soft glow around bright areas and a light haze over the whole image. Small FPS cost
+GLOW_STRENGTH=Glow Strength
+GLOW_STRENGTH.comment=Strength of the glow around bright areas. 0 = haze only, no glow
+CHROMA=Chromatic Aberration
+CHROMA.comment=Red/blue color fringing at the screen edges, like a cheap lens. The center of the screen stays clean
+CHROMA_STRENGTH=Aberration Strength
+CHROMA_STRENGTH.comment=How far the red and blue channels are shifted at the edges
+CHROMA_OPACITY=Aberration Opacity
+CHROMA_OPACITY.comment=How strongly the shifted colors are blended in. Lower = subtler effect
+FILM_GRAIN=Film Grain
+FILM_GRAIN.comment=Animated film grain over the image
+GRAIN_OPACITY=Grain Opacity
+GRAIN_OPACITY.comment=How visible the grain is. Lower = more transparent
+GRAIN_CONTRAST=Grain Contrast
+GRAIN_CONTRAST.comment=Low = soft faint ripple, high = hard distinct specks
+GRAIN_SIZE=Grain Size
+GRAIN_SIZE.comment=Grain size in pixels. Above 1 = larger, softer grain
+GRAIN_COLOR=Grain Color
+GRAIN_COLOR.comment=0 = gray grain, 1 = fully colored grain
+GRAIN_DENSITY=Grain Density
+GRAIN_DENSITY.comment=Share of pixels covered by grain. Lower = sparse separate specks, 1 = dense grain everywhere
+VIGNETTE=Vignette
+VIGNETTE.comment=Darkens the corners and edges of the screen
+
+FXAA=Anti-Aliasing (FXAA)
+FXAA.comment=Smooths jagged block edges. Small FPS cost: a few extra samples per pixel, the smoothing itself runs only on contrasty edges
+FXAA_STRENGTH=FXAA Strength
+FXAA_STRENGTH.comment=How much of the smoothed image is blended in. Lower = sharper but more jagged edges
+SHARPEN=Sharpen
+SHARPEN.comment=Light sharpening that brings back detail. Small FPS cost
+SHARPEN_STRENGTH=Sharpen Strength
+SHARPEN_STRENGTH.comment=How strong the sharpening is. Too high = bright halos around edges
+
+LOW_HEALTH=Low Health Effect
+LOW_HEALTH.comment=When health is low, the screen edges pulse red with a heartbeat and colors fade
+LOW_HEALTH_STRENGTH=Low Health Strength
+LOW_HEALTH_STRENGTH.comment=How strong the low health effect is
+LOW_AIR=Low Air Effect
+LOW_AIR.comment=When you are running out of air underwater, the view darkens, narrows and loses color
+LOW_AIR_STRENGTH=Low Air Strength
+LOW_AIR_STRENGTH.comment=How strong the low air effect is
+INTRO_TITLE=Intro Title
+INTRO_TITLE.comment=Shows the shader name, version and author for a couple of seconds after loading
+INTRO_POSITION=Intro Title Position
+INTRO_POSITION.comment=Screen corner where the intro title appears
+value.INTRO_POSITION.0=Top Right
+value.INTRO_POSITION.1=Top Left
+value.INTRO_POSITION.2=Bottom Right
+value.INTRO_POSITION.3=Bottom Left

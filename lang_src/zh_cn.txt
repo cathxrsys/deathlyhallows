@@ -1,0 +1,203 @@
+LEGEND=名称颜色 = 性能开销：{G}绿色{R} - 无开销，{Y}黄色{R} - 少量 FPS，{C}红色{R} - 开销大
+screen.LIGHTING=光照与时间
+screen.SKY=天空与云
+screen.LIGHTS=动态光源
+screen.EMISSIVE=发光方块与生物
+screen.WEATHER=天气与雪
+screen.WATER=水与冰
+screen.FOLIAGE=植被
+screen.DIMENSIONS=下界与末地
+screen.COLOR=颜色
+screen.POST=镜头效果
+screen.AA=抗锯齿与锐化
+screen.HUD=状态与界面
+
+NIGHT_BRIGHTNESS=夜晚亮度
+NIGHT_BRIGHTNESS.comment=夜空、雾和照在世界上的月光的亮度。0 = 漆黑的夜晚，只有火把发光
+DAY_GLOOM=阴天程度
+DAY_GLOOM.comment=阴天的日光：白天的天空和雾变暗，阴影处更深，草和树叶的颜色变淡。0 = 正常的晴朗白天
+CAVE_LIGHT=洞穴日光
+CAVE_LIGHT.comment=有多少日光能照进洞口、悬崖下方和树荫下。0 = 这些地方几乎全黑。无论数值如何，深处的洞穴都保持黑暗
+TWILIGHT_STRENGTH=黄昏色调
+TWILIGHT_STRENGTH.comment=日出/日落时温暖的橙色和傍晚的蓝色，作用于天空、雾和光照。0 = 无色调
+TWILIGHT_LENGTH=黄昏时长
+TWILIGHT_LENGTH.comment=日出和日落持续多久。越低 = 短而突然，越高 = 昼夜之间更长、更平滑的过渡
+
+CLOUDS=云层
+CLOUDS.comment=覆盖整片天空的静止深灰色云层，像漫长的雨天。关闭 = 普通的天空渐变
+CLOUD_DARKNESS=云层暗度
+CLOUD_DARKNESS.comment=阴天天空和雾有多暗。越低 = 浅灰色，越高 = 厚重而暗沉
+CLOUD_VARIATION=云层变化
+CLOUD_VARIATION.comment=云层中大片柔和的明暗斑块。0 = 完全均匀的灰色
+CLOUD_HORIZON=地平线净空带
+CLOUD_HORIZON.comment=地平线以上多少度内天空保持纯雾色、没有斑块。用于隐藏渲染距离边缘的远山
+SKY_COOL=天空蓝色调
+SKY_COOL.comment=阴天天空和雾的冷蓝色调。0 = 中性灰，1 = 明显偏蓝
+
+TORCH_FLICKER=火光闪烁
+TORCH_FLICKER.comment=火把、营火和岩浆的光会轻微闪烁。手持的火把和灯笼也会闪烁。灯类也可能轻微闪烁：着色器无法把它们与火区分开
+FLICKER_STRENGTH=闪烁强度
+FLICKER_STRENGTH.comment=亮度波动的幅度。越高 = 闪烁越强、越明显
+FLICKER_SPEED=闪烁速度
+FLICKER_SPEED.comment=光线波动的速度。越低 = 平静缓慢的呼吸感，越高 = 急促快速的闪烁
+HELD_LIGHT=物品光源
+HELD_LIGHT.comment=火把、灯笼、萤石等发光物品会照亮周围：在你手中、在其他生物手中、掉落在地上以及在物品展示框中。少量 FPS 开销：每个像素都要检查附近的光源
+HELD_LIGHT_STRENGTH=物品光源强度
+HELD_LIGHT_STRENGTH.comment=发光物品的光照亮度
+HELD_LIGHT_RADIUS=物品光源范围
+HELD_LIGHT_RADIUS.comment=光照距离相对于物品亮度等级的比例。1 = 与放置的同一方块一样远
+PORTAL_LIGHT=传送门光照
+PORTAL_LIGHT.comment=最近的下界传送门会向周围方块投射真实的紫色光。少量 FPS 开销：被照亮的像素需从缓冲区读取传送门位置
+PORTAL_LIGHT_STRENGTH=传送门光照强度
+PORTAL_LIGHT_STRENGTH.comment=传送门紫色光的亮度
+PORTAL_LIGHT_RADIUS=传送门光照范围
+PORTAL_LIGHT_RADIUS.comment=传送门光照的距离，单位为方块
+PORTAL_FRAME_TINT=传送门框染色
+PORTAL_FRAME_TINT.comment=被传送门照亮的黑曜石会变成紫色。无开销，但火把或岩浆旁的黑曜石也可能被染色
+ORE_LIGHT=矿石光照
+ORE_LIGHT.comment=矿石会向附近方块、生物和手持物品投射彩色光。光会像原版光照一样绕过拐角，不会穿墙。开销大：每帧额外一次计算通道，每个像素还要读取光照网格。关闭 = 完全无开销
+ORE_LIGHT_STRENGTH=矿石光照强度
+ORE_LIGHT_STRENGTH.comment=矿石彩色光的亮度
+ORE_LIGHT_RADIUS=矿石光照范围
+ORE_LIGHT_RADIUS.comment=矿石光传播多少格。越高 = 每帧要计算的方块越多 = FPS 越低
+ORE_LIGHT_DIST=矿石光照距离
+ORE_LIGHT_DIST.comment=你周围多少格内可以看到矿石光。靠近时会平滑显现。越高 = 每帧要计算的方块越多 = FPS 越低
+
+ORE_GLOW=矿石发光
+ORE_GLOW.comment=矿石的彩色斑点在黑暗中（洞穴、夜晚）有多亮。0 = 原版矿石
+ORE_DAY_GLOW=矿石日间发光
+ORE_DAY_GLOW.comment=白天矿石的额外发光，使其在明亮表面上依然显眼。0 = 与黑暗中相同
+ORE_FADE_DIST=矿石发光衰减距离
+ORE_FADE_DIST.comment=矿石发光减弱到最低时的距离，单位为方块（见矿石远处发光）
+ORE_FAR_GLOW=矿石远处发光
+ORE_FAR_GLOW.comment=在衰减距离及更远处保留的发光比例。0 = 远处矿石不发光，1 = 不衰减
+REDSTONE_GLOW=红石发光
+REDSTONE_GLOW.comment=红石火把、充能红石粉及其他红石元件的发光。0 = 原版外观
+PORTAL_GLOW=下界传送门发光
+PORTAL_GLOW.comment=下界传送门紫色发光表面的亮度。0 = 原版外观
+MOB_EYES=生物眼睛发光
+MOB_EYES.comment=末影人、蜘蛛和其他生物的眼睛在黑暗中发光
+MOB_EYES_GLOW=生物眼睛亮度
+MOB_EYES_GLOW.comment=近处生物眼睛的亮度
+MOB_EYES_FADE_DIST=眼睛发光衰减距离
+MOB_EYES_FADE_DIST.comment=眼睛发光减弱到最低时的距离，单位为方块（见眼睛远处发光）
+MOB_EYES_FAR_GLOW=眼睛远处发光
+MOB_EYES_FAR_GLOW.comment=衰减距离处的眼睛亮度，相对于原版贴图。低于 1 = 比原版暗，1 = 原版眼睛
+
+RAIN_FOG=雨雾
+RAIN_FOG.comment=在户外下雨时变浓的额外雾气。渲染距离不变。0 = 无雨雾
+RAIN_SKY_DARKNESS=雨天天空暗度
+RAIN_SKY_DARKNESS.comment=下雨时天空和雾变暗的程度。0 = 与晴天相同
+RAIN_OPACITY=雨滴不透明度
+RAIN_OPACITY.comment=被照亮处雨滴和雪花的可见程度
+RAIN_THINNESS=雨滴纤细度
+RAIN_THINNESS.comment=越高 = 雨滴越细、越透明。0 = 原版粗雨线
+RAIN_BRIGHTNESS=雨滴亮度
+RAIN_BRIGHTNESS.comment=雨滴和水花的亮度。越低 = 越暗越灰，1 = 白天为白色。火旁的雨滴仍会被照亮
+FOG_GLOW=雾中火光
+FOG_GLOW.comment=火把和火焰的光在雨雾中散射，在被照亮的地方周围形成温暖的光晕。仅在下雨时可见
+FOG_GLOW_STRENGTH=雾中火光强度
+FOG_GLOW_STRENGTH.comment=雨雾中光源周围温暖光晕的亮度
+LIGHTNING_BOLT=分叉闪电
+LIGHTNING_BOLT.comment=在天空中绘制程序生成的分叉闪电，替代原版闪电。关闭 = 原版闪电
+LIGHTNING_STRENGTH=闪电光照
+LIGHTNING_STRENGTH.comment=闪电闪光照亮天空和世界的强度。0 = 无闪光
+SNOWIFY=雪景世界
+SNOWIFY.comment=冬季外观：草和树叶覆上白霜，露天的方块顶面被积雪覆盖。火把和岩浆附近的雪会融化。仅限主世界
+SNOW_AMOUNT=积雪量
+SNOW_AMOUNT.comment=世界被雪和霜覆盖的程度
+SNOW_BRIGHTNESS=积雪亮度
+SNOW_BRIGHTNESS.comment=白天雪和霜的亮度。1 = 即使在阴天下也是纯白
+
+WATER_OPACITY=水面不透明度
+WATER_OPACITY.comment=从上方看时水面的不透明度。深水会自然变浑浊，所以水底会随深度逐渐消失
+WATER_BRIGHTNESS=水面亮度
+WATER_BRIGHTNESS.comment=深灰色水面的亮度
+WATER_PATTERN=水面纹理
+WATER_PATTERN.comment=从上方看时水的贴图透过浑浊显现的程度。0 = 平整的浑浊水面
+UNDERWATER_DENSITY=水下雾浓度
+UNDERWATER_DENSITY.comment=深蓝色浑浊在水下及透过水面遮蔽视野的速度。越高 = 越浓，水底消失得越早
+ICE_OPACITY=冰的不透明度
+ICE_OPACITY.comment=冰和霜冰的不透明程度。越低 = 越透明
+
+SWAY=植物摇摆
+SWAY.comment=树叶、草、花和其他植物随风摇摆
+SWAY_STRENGTH=摇摆幅度
+SWAY_STRENGTH.comment=树叶和植物的摆动幅度
+SWAY_SPEED=摇摆速度
+SWAY_SPEED.comment=树叶和植物的摆动速度
+STORM_SWAY=风暴摇摆
+STORM_SWAY.comment=雨和雷暴对摇摆速度与幅度的增强程度。0 = 天气无影响
+
+NETHER_BRIGHTNESS=下界亮度
+NETHER_BRIGHTNESS.comment=下界环境光和雾的亮度。只影响暗处：岩浆、火和火把的亮度不变
+NETHER_HAZE=下界热浪
+NETHER_HAZE.comment=下界的远景像火上的热空气一样扭曲抖动。近处方块和手保持清晰。少量 FPS 开销，仅在下界：额外一次读取深度的全屏通道
+NETHER_HAZE_STRENGTH=热浪强度
+NETHER_HAZE_STRENGTH.comment=热浪扭曲画面的程度
+NETHER_HAZE_DIST=热浪距离
+NETHER_HAZE_DIST.comment=热浪开始出现的距离，单位为方块。在该距离的 2.5 倍处达到最大强度
+NETHER_HAZE_SPEED_MIN=热浪最低速度
+NETHER_HAZE_SPEED_MIN.comment=最慢的抖动速度。速度会像阵阵热风一样在最低和最高之间平滑变化。两者设为相同即为恒定速度
+NETHER_HAZE_SPEED_MAX=热浪最高速度
+NETHER_HAZE_SPEED_MAX.comment=阵风时最快的抖动速度
+END_BRIGHTNESS=末地亮度
+END_BRIGHTNESS.comment=末地环境光、天空和雾的亮度。只影响暗处：火把的亮度不变
+
+DESATURATION=去饱和
+DESATURATION.comment=降低整个画面的色彩饱和度。0 = 原始颜色，1 = 黑白
+NIGHT_DESATURATION=暗处去饱和
+NIGHT_DESATURATION.comment=暗处（夜晚、洞穴、阴影）颜色褪成冷灰色的程度。0 = 暗处保留颜色
+HIGHLIGHT_BOOST=夜间高光增强
+HIGHLIGHT_BOOST.comment=夜晚让明亮处（火、火把、岩浆）更亮，使其在黑暗中更突出。白天无效。在下界和末地始终生效
+
+GLOW=泛光
+GLOW.comment=明亮区域周围的柔和光晕以及整个画面上的淡淡雾感。少量 FPS 开销
+GLOW_STRENGTH=泛光强度
+GLOW_STRENGTH.comment=明亮区域周围光晕的强度。0 = 只有雾感，没有光晕
+CHROMA=色差
+CHROMA.comment=屏幕边缘出现红/蓝色边，像廉价镜头一样。屏幕中心保持干净
+CHROMA_STRENGTH=色差强度
+CHROMA_STRENGTH.comment=边缘处红色和蓝色通道的偏移距离
+CHROMA_OPACITY=色差不透明度
+CHROMA_OPACITY.comment=偏移颜色的混合程度。越低 = 效果越微弱
+FILM_GRAIN=胶片颗粒
+FILM_GRAIN.comment=画面上的动态胶片颗粒
+GRAIN_OPACITY=颗粒不透明度
+GRAIN_OPACITY.comment=颗粒的可见程度。越低 = 越透明
+GRAIN_CONTRAST=颗粒对比度
+GRAIN_CONTRAST.comment=低 = 柔和微弱的波纹，高 = 清晰锐利的颗粒点
+GRAIN_SIZE=颗粒大小
+GRAIN_SIZE.comment=颗粒大小，单位为像素。大于 1 = 颗粒更大更柔和
+GRAIN_COLOR=颗粒颜色
+GRAIN_COLOR.comment=0 = 灰色颗粒，1 = 完全彩色颗粒
+GRAIN_DENSITY=颗粒密度
+GRAIN_DENSITY.comment=被颗粒覆盖的像素比例。越低 = 稀疏分散的颗粒点，1 = 处处密集
+VIGNETTE=暗角
+VIGNETTE.comment=使屏幕四角和边缘变暗
+
+FXAA=抗锯齿 (FXAA)
+FXAA.comment=平滑方块的锯齿边缘。少量 FPS 开销：每个像素多几次采样，平滑本身只作用于高对比度的边缘
+FXAA_STRENGTH=FXAA 强度
+FXAA_STRENGTH.comment=平滑后画面的混合比例。越低 = 越清晰，但边缘锯齿越明显
+SHARPEN=锐化
+SHARPEN.comment=轻度锐化，找回细节。少量 FPS 开销
+SHARPEN_STRENGTH=锐化强度
+SHARPEN_STRENGTH.comment=锐化的强度。过高 = 边缘周围出现亮色光晕
+
+LOW_HEALTH=低生命值效果
+LOW_HEALTH.comment=生命值低时，屏幕边缘随心跳闪烁红光，颜色变淡
+LOW_HEALTH_STRENGTH=低生命值效果强度
+LOW_HEALTH_STRENGTH.comment=低生命值效果的强度
+LOW_AIR=缺氧效果
+LOW_AIR.comment=在水下氧气快耗尽时，视野变暗、变窄并失去颜色
+LOW_AIR_STRENGTH=缺氧效果强度
+LOW_AIR_STRENGTH.comment=缺氧效果的强度
+INTRO_TITLE=开场标题
+INTRO_TITLE.comment=加载后几秒内显示着色器名称、版本和作者
+INTRO_POSITION=开场标题位置
+INTRO_POSITION.comment=开场标题出现的屏幕角落
+value.INTRO_POSITION.0=右上角
+value.INTRO_POSITION.1=左上角
+value.INTRO_POSITION.2=右下角
+value.INTRO_POSITION.3=左下角

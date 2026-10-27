@@ -1,0 +1,203 @@
+LEGEND=Color del nombre = coste: {G}verde{R} - gratis, {Y}amarillo{R} - algo de FPS, {C}rojo{R} - pesado
+screen.LIGHTING=Iluminación y hora del día
+screen.SKY=Cielo y nubes
+screen.LIGHTS=Luz dinámica
+screen.EMISSIVE=Bloques y mobs brillantes
+screen.WEATHER=Clima y nieve
+screen.WATER=Agua y hielo
+screen.FOLIAGE=Vegetación
+screen.DIMENSIONS=Nether y End
+screen.COLOR=Color
+screen.POST=Efectos de cámara
+screen.AA=Antialiasing y nitidez
+screen.HUD=Estado e interfaz
+
+NIGHT_BRIGHTNESS=Brillo nocturno
+NIGHT_BRIGHTNESS.comment=Brillo del cielo nocturno, la niebla y la luz de la luna sobre el mundo. 0 = noche totalmente negra, solo iluminan las antorchas
+DAY_GLOOM=Día nublado
+DAY_GLOOM.comment=Luz de día encapotado: oscurece el cielo y la niebla de día, profundiza las sombras y apaga el color de la hierba y las hojas. 0 = día brillante normal
+CAVE_LIGHT=Luz diurna en cuevas
+CAVE_LIGHT.comment=Cuánta luz del día llega a las entradas de cuevas, salientes y bajo los árboles. 0 = casi negro. Las cuevas profundas siguen oscuras con cualquier valor
+TWILIGHT_STRENGTH=Tono del crepúsculo
+TWILIGHT_STRENGTH.comment=Tono naranja cálido del amanecer/atardecer y azul del anochecer en el cielo, la niebla y la luz. 0 = sin tono
+TWILIGHT_LENGTH=Duración del crepúsculo
+TWILIGHT_LENGTH.comment=Cuánto duran el amanecer y el atardecer. Menor = corto y brusco, mayor = transición larga y suave entre día y noche
+
+CLOUDS=Nubes
+CLOUDS.comment=Capa gris oscura e inmóvil que cubre todo el cielo, como en un largo día de lluvia. Desactivado = degradado de cielo simple
+CLOUD_DARKNESS=Oscuridad de las nubes
+CLOUD_DARKNESS.comment=Qué tan oscuros son el cielo encapotado y la niebla. Menor = gris claro, mayor = pesado y oscuro
+CLOUD_VARIATION=Variación de las nubes
+CLOUD_VARIATION.comment=Grandes manchas suaves más claras y más oscuras en la capa de nubes. 0 = gris perfectamente uniforme
+CLOUD_HORIZON=Franja despejada del horizonte
+CLOUD_HORIZON.comment=Altura en grados sobre el horizonte donde el cielo mantiene el color liso de la niebla, sin manchas. Oculta las montañas lejanas en el borde de renderizado
+SKY_COOL=Tono azul del cielo
+SKY_COOL.comment=Tono azul frío del cielo encapotado y la niebla. 0 = gris neutro, 1 = claramente azul
+
+TORCH_FLICKER=Parpadeo del fuego
+TORCH_FLICKER.comment=La luz de antorchas, fogatas y lava parpadea suavemente. Las antorchas y faroles en la mano también. Las lámparas pueden parpadear un poco: el shader no las distingue del fuego
+FLICKER_STRENGTH=Intensidad del parpadeo
+FLICKER_STRENGTH.comment=Cuánto oscila el brillo. Mayor = parpadeo más fuerte y visible
+FLICKER_SPEED=Velocidad del parpadeo
+FLICKER_SPEED.comment=Qué tan rápido oscila la luz. Menor = respiración lenta y tranquila, mayor = parpadeo rápido y nervioso
+HELD_LIGHT=Luz de objetos
+HELD_LIGHT.comment=Antorchas, faroles, piedra luminosa y otros objetos brillantes iluminan su entorno: en tus manos, en manos de mobs, en el suelo y en marcos. Algo de coste en FPS: cada píxel comprueba las fuentes de luz cercanas
+HELD_LIGHT_STRENGTH=Intensidad de luz de objetos
+HELD_LIGHT_STRENGTH.comment=Brillo de la luz de los objetos brillantes
+HELD_LIGHT_RADIUS=Radio de luz de objetos
+HELD_LIGHT_RADIUS.comment=Alcance de la luz respecto al nivel de luz del objeto. 1 = igual que el mismo bloque colocado
+PORTAL_LIGHT=Luz del portal
+PORTAL_LIGHT.comment=El portal del Nether más cercano proyecta luz morada real sobre los bloques de alrededor. Algo de coste en FPS: los píxeles iluminados leen la posición del portal de un búfer
+PORTAL_LIGHT_STRENGTH=Intensidad de luz del portal
+PORTAL_LIGHT_STRENGTH.comment=Brillo de la luz morada del portal
+PORTAL_LIGHT_RADIUS=Radio de luz del portal
+PORTAL_LIGHT_RADIUS.comment=Alcance de la luz del portal, en bloques
+PORTAL_FRAME_TINT=Tinte del marco del portal
+PORTAL_FRAME_TINT.comment=La obsidiana iluminada por un portal se vuelve morada. Gratis, pero la obsidiana junto a antorchas o lava también puede teñirse
+ORE_LIGHT=Luz de minerales
+ORE_LIGHT.comment=Los minerales proyectan luz de color sobre bloques cercanos, mobs y objetos en la mano. La luz rodea esquinas como la luz normal y no atraviesa paredes. Pesado: un pase de cómputo extra cada fotograma y una lectura de la rejilla de luz por píxel. Desactivado = sin coste
+ORE_LIGHT_STRENGTH=Intensidad de luz de minerales
+ORE_LIGHT_STRENGTH.comment=Brillo de la luz de color de los minerales
+ORE_LIGHT_RADIUS=Radio de luz de minerales
+ORE_LIGHT_RADIUS.comment=Cuántos bloques se extiende la luz de los minerales. Mayor = más bloques que calcular cada fotograma = menos FPS
+ORE_LIGHT_DIST=Distancia de luz de minerales
+ORE_LIGHT_DIST.comment=Distancia en bloques a tu alrededor en la que se ve la luz de minerales. Aparece suavemente al acercarte. Mayor = más bloques que calcular cada fotograma = menos FPS
+
+ORE_GLOW=Brillo de minerales
+ORE_GLOW.comment=Cuánto brillan las motas de color de los minerales en la oscuridad (cuevas, noche). 0 = minerales normales
+ORE_DAY_GLOW=Brillo diurno de minerales
+ORE_DAY_GLOW.comment=Brillo extra de los minerales a la luz del día para que se vean en superficies claras. 0 = igual que en la oscuridad
+ORE_FADE_DIST=Distancia de atenuación de minerales
+ORE_FADE_DIST.comment=Distancia en bloques a la que el brillo de los minerales llega a su mínimo (ver Brillo lejano de minerales)
+ORE_FAR_GLOW=Brillo lejano de minerales
+ORE_FAR_GLOW.comment=Parte del brillo que se mantiene a la distancia de atenuación y más allá. 0 = los minerales lejanos no brillan, 1 = sin atenuación
+REDSTONE_GLOW=Brillo de redstone
+REDSTONE_GLOW.comment=Brillo de antorchas de redstone, polvo de redstone activo y otras piezas de redstone. 0 = aspecto normal
+PORTAL_GLOW=Brillo del portal del Nether
+PORTAL_GLOW.comment=Brillo de la superficie morada de los portales del Nether. 0 = aspecto normal
+MOB_EYES=Ojos brillantes de mobs
+MOB_EYES.comment=Los ojos de endermans, arañas y otros mobs brillan en la oscuridad
+MOB_EYES_GLOW=Intensidad de ojos de mobs
+MOB_EYES_GLOW.comment=Brillo de los ojos de los mobs de cerca
+MOB_EYES_FADE_DIST=Distancia de atenuación de ojos
+MOB_EYES_FADE_DIST.comment=Distancia en bloques a la que el brillo de los ojos llega a su mínimo (ver Brillo lejano de ojos)
+MOB_EYES_FAR_GLOW=Brillo lejano de ojos
+MOB_EYES_FAR_GLOW.comment=Brillo de los ojos a la distancia de atenuación respecto a la textura normal. Menos de 1 = más tenue que lo normal, 1 = ojos normales
+
+RAIN_FOG=Niebla de lluvia
+RAIN_FOG.comment=Bruma extra que se espesa durante la lluvia cuando estás al aire libre. La distancia de renderizado no cambia. 0 = sin bruma
+RAIN_SKY_DARKNESS=Oscuridad del cielo con lluvia
+RAIN_SKY_DARKNESS.comment=Cuánto se oscurecen el cielo y la niebla mientras llueve. 0 = igual que con tiempo seco
+RAIN_OPACITY=Opacidad de la lluvia
+RAIN_OPACITY.comment=Qué tan visibles son las gotas y los copos de nieve donde están iluminados
+RAIN_THINNESS=Finura de la lluvia
+RAIN_THINNESS.comment=Mayor = gotas más finas y transparentes. 0 = trazos gruesos normales
+RAIN_BRIGHTNESS=Brillo de la lluvia
+RAIN_BRIGHTNESS.comment=Brillo de las gotas y salpicaduras. Menor = más oscuras y grises, 1 = blancas a la luz del día. Las gotas cerca del fuego siguen iluminadas
+FOG_GLOW=Brillo de antorchas en la niebla
+FOG_GLOW.comment=La luz de antorchas y fogatas se dispersa en la bruma de lluvia y crea un halo cálido alrededor de los lugares iluminados. Solo visible cuando llueve
+FOG_GLOW_STRENGTH=Intensidad del brillo en la niebla
+FOG_GLOW_STRENGTH.comment=Brillo del halo cálido alrededor de las luces en la bruma de lluvia
+LIGHTNING_BOLT=Rayo ramificado
+LIGHTNING_BOLT.comment=Dibuja en el cielo un rayo ramificado procedural en lugar del normal. Desactivado = rayo normal
+LIGHTNING_STRENGTH=Luz del rayo
+LIGHTNING_STRENGTH.comment=Cuánto ilumina el destello del rayo el cielo y el mundo. 0 = sin destello
+SNOWIFY=Mundo nevado
+SNOWIFY.comment=Aspecto invernal: la hierba y las hojas se cubren de escarcha blanca, las caras superiores a cielo abierto se cubren de nieve. La nieve se derrite cerca de antorchas y lava. Solo en el Overworld
+SNOW_AMOUNT=Cantidad de nieve
+SNOW_AMOUNT.comment=Cuánto se cubre el mundo de nieve y escarcha
+SNOW_BRIGHTNESS=Brillo de la nieve
+SNOW_BRIGHTNESS.comment=Brillo de la nieve y la escarcha a la luz del día. 1 = blanco puro incluso bajo el cielo encapotado
+
+WATER_OPACITY=Opacidad del agua
+WATER_OPACITY.comment=Opacidad de la superficie del agua vista desde arriba. El agua profunda se enturbia por sí sola, así que el fondo desaparece con la profundidad
+WATER_BRIGHTNESS=Brillo del agua
+WATER_BRIGHTNESS.comment=Brillo de la superficie gris oscura del agua
+WATER_PATTERN=Dibujo de la superficie
+WATER_PATTERN.comment=Cuánto de la textura del agua se ve a través de la turbidez desde arriba. 0 = agua turbia lisa
+UNDERWATER_DENSITY=Densidad de niebla submarina
+UNDERWATER_DENSITY.comment=Qué tan rápido la turbidez azul oscura oculta la vista bajo el agua y a través de su superficie. Mayor = más espesa, el fondo desaparece antes
+ICE_OPACITY=Opacidad del hielo
+ICE_OPACITY.comment=Qué tan opacos son el hielo y el hielo escarchado. Menor = más transparente
+
+SWAY=Balanceo de plantas
+SWAY.comment=Hojas, hierba, flores y otras plantas se mecen con el viento
+SWAY_STRENGTH=Intensidad del balanceo
+SWAY_STRENGTH.comment=Cuánto se mueven las hojas y las plantas
+SWAY_SPEED=Velocidad del balanceo
+SWAY_SPEED.comment=Qué tan rápido se mueven las hojas y las plantas
+STORM_SWAY=Balanceo en tormenta
+STORM_SWAY.comment=Cuánto aumentan la lluvia y las tormentas la velocidad y amplitud del balanceo. 0 = el clima no influye
+
+NETHER_BRIGHTNESS=Brillo del Nether
+NETHER_BRIGHTNESS.comment=Brillo de la luz ambiental y la niebla del Nether. Solo afecta a zonas oscuras: la lava, el fuego y las antorchas siguen igual de brillantes
+NETHER_HAZE=Calima del Nether
+NETHER_HAZE.comment=A lo lejos el Nether tiembla como el aire caliente sobre una hoguera. Los bloques cercanos y las manos siguen nítidos. Algo de coste en FPS, solo en el Nether: un pase extra a pantalla completa leyendo la profundidad
+NETHER_HAZE_STRENGTH=Intensidad de la calima
+NETHER_HAZE_STRENGTH.comment=Cuánto deforma la calima la imagen
+NETHER_HAZE_DIST=Distancia de la calima
+NETHER_HAZE_DIST.comment=Distancia en bloques donde empieza la calima. Alcanza toda su fuerza a 2.5 veces esta distancia
+NETHER_HAZE_SPEED_MIN=Velocidad mín. de la calima
+NETHER_HAZE_SPEED_MIN.comment=Velocidad de temblor más lenta. La velocidad varía suavemente entre mín. y máx. como ráfagas de aire caliente. Iguálalas para una velocidad constante
+NETHER_HAZE_SPEED_MAX=Velocidad máx. de la calima
+NETHER_HAZE_SPEED_MAX.comment=Velocidad de temblor más rápida durante una ráfaga
+END_BRIGHTNESS=Brillo del End
+END_BRIGHTNESS.comment=Brillo de la luz ambiental, el cielo y la niebla del End. Solo afecta a zonas oscuras: las antorchas siguen igual de brillantes
+
+DESATURATION=Desaturación
+DESATURATION.comment=Apaga los colores de toda la imagen. 0 = colores originales, 1 = blanco y negro
+NIGHT_DESATURATION=Desaturación en la oscuridad
+NIGHT_DESATURATION.comment=Cuánto pasan los colores a un gris frío en zonas oscuras (noche, cuevas, sombras). 0 = las zonas oscuras conservan su color
+HIGHLIGHT_BOOST=Realce nocturno de luces
+HIGHLIGHT_BOOST.comment=Hace más brillantes los puntos de luz (fuego, antorchas, lava) de noche para que destaquen en la oscuridad. Sin efecto de día. Siempre activo en el Nether y el End
+
+GLOW=Resplandor
+GLOW.comment=Resplandor suave alrededor de zonas brillantes y una ligera bruma sobre toda la imagen. Algo de coste en FPS
+GLOW_STRENGTH=Intensidad del resplandor
+GLOW_STRENGTH.comment=Intensidad del resplandor alrededor de zonas brillantes. 0 = solo bruma, sin resplandor
+CHROMA=Aberración cromática
+CHROMA.comment=Bordes de color rojo/azul en los extremos de la pantalla, como en una lente barata. El centro de la pantalla queda limpio
+CHROMA_STRENGTH=Intensidad de la aberración
+CHROMA_STRENGTH.comment=Cuánto se desplazan los canales rojo y azul en los bordes
+CHROMA_OPACITY=Opacidad de la aberración
+CHROMA_OPACITY.comment=Cuánto se mezclan los colores desplazados. Menor = efecto más sutil
+FILM_GRAIN=Grano de película
+FILM_GRAIN.comment=Grano de película animado sobre la imagen
+GRAIN_OPACITY=Opacidad del grano
+GRAIN_OPACITY.comment=Qué tan visible es el grano. Menor = más transparente
+GRAIN_CONTRAST=Contraste del grano
+GRAIN_CONTRAST.comment=Bajo = ondulación suave y tenue, alto = motas duras y nítidas
+GRAIN_SIZE=Tamaño del grano
+GRAIN_SIZE.comment=Tamaño del grano en píxeles. Más de 1 = grano más grande y suave
+GRAIN_COLOR=Color del grano
+GRAIN_COLOR.comment=0 = grano gris, 1 = grano totalmente de color
+GRAIN_DENSITY=Densidad del grano
+GRAIN_DENSITY.comment=Parte de los píxeles cubiertos por grano. Menor = motas sueltas y escasas, 1 = grano denso en todas partes
+VIGNETTE=Viñeta
+VIGNETTE.comment=Oscurece las esquinas y los bordes de la pantalla
+
+FXAA=Antialiasing (FXAA)
+FXAA.comment=Suaviza los bordes dentados de los bloques. Algo de coste en FPS: unas pocas lecturas extra por píxel, el suavizado solo actúa en bordes contrastados
+FXAA_STRENGTH=Intensidad de FXAA
+FXAA_STRENGTH.comment=Cuánto de la imagen suavizada se mezcla. Menor = más nítido pero con bordes más dentados
+SHARPEN=Nitidez
+SHARPEN.comment=Ligero enfoque que recupera detalle. Algo de coste en FPS
+SHARPEN_STRENGTH=Intensidad de la nitidez
+SHARPEN_STRENGTH.comment=Qué tan fuerte es el enfoque. Demasiado alto = halos claros alrededor de los bordes
+
+LOW_HEALTH=Efecto de poca vida
+LOW_HEALTH.comment=Con poca vida los bordes de la pantalla laten en rojo al ritmo del corazón y los colores se apagan
+LOW_HEALTH_STRENGTH=Intensidad del efecto de vida
+LOW_HEALTH_STRENGTH.comment=Qué tan fuerte es el efecto de poca vida
+LOW_AIR=Efecto de falta de aire
+LOW_AIR.comment=Cuando te quedas sin aire bajo el agua, la vista se oscurece, se estrecha y pierde color
+LOW_AIR_STRENGTH=Intensidad del efecto de aire
+LOW_AIR_STRENGTH.comment=Qué tan fuerte es el efecto de falta de aire
+INTRO_TITLE=Título de inicio
+INTRO_TITLE.comment=Muestra el nombre del shader, la versión y el autor durante un par de segundos tras cargar
+INTRO_POSITION=Posición del título
+INTRO_POSITION.comment=Esquina de la pantalla donde aparece el título de inicio
+value.INTRO_POSITION.0=Arriba a la derecha
+value.INTRO_POSITION.1=Arriba a la izquierda
+value.INTRO_POSITION.2=Abajo a la derecha
+value.INTRO_POSITION.3=Abajo a la izquierda

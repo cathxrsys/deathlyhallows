@@ -1,0 +1,203 @@
+LEGEND=Namensfarbe = Leistungskosten: {G}grün{R} - kostenlos, {Y}gelb{R} - etwas FPS, {C}rot{R} - schwer
+screen.LIGHTING=Beleuchtung und Tageszeit
+screen.SKY=Himmel und Wolken
+screen.LIGHTS=Dynamisches Licht
+screen.EMISSIVE=Leuchtende Blöcke und Mobs
+screen.WEATHER=Wetter und Schnee
+screen.WATER=Wasser und Eis
+screen.FOLIAGE=Pflanzen
+screen.DIMENSIONS=Nether und End
+screen.COLOR=Farbe
+screen.POST=Kameraeffekte
+screen.AA=Kantenglättung und Schärfe
+screen.HUD=Status und Oberfläche
+
+NIGHT_BRIGHTNESS=Nachthelligkeit
+NIGHT_BRIGHTNESS.comment=Helligkeit des Nachthimmels, des Nebels und des Mondlichts auf der Welt. 0 = stockdunkle Nacht, nur Fackeln spenden Licht
+DAY_GLOOM=Trüber Tag
+DAY_GLOOM.comment=Bedecktes Tageslicht: dämpft Himmel und Nebel am Tag, vertieft Schatten an schattigen Stellen und dämpft die Farben von Gras und Laub. 0 = normaler heller Tag
+CAVE_LIGHT=Tageslicht in Höhlen
+CAVE_LIGHT.comment=Wie viel Tageslicht Höhleneingänge, Überhänge und Stellen unter Bäumen erreicht. 0 = dort fast schwarz. Tiefe Höhlen bleiben bei jedem Wert dunkel
+TWILIGHT_STRENGTH=Dämmerungsfarbe
+TWILIGHT_STRENGTH.comment=Warmes Orange bei Sonnenauf- und -untergang und blaue Dämmerung auf Himmel, Nebel und Beleuchtung. 0 = keine Tönung
+TWILIGHT_LENGTH=Dämmerungsdauer
+TWILIGHT_LENGTH.comment=Wie lange Sonnenauf- und -untergang dauern. Niedriger = kurz und abrupt, höher = langer, weicher Übergang zwischen Tag und Nacht
+
+CLOUDS=Wolken
+CLOUDS.comment=Stille, dunkelgraue Wolkendecke über den ganzen Himmel, wie an einem langen Regentag. Aus = einfacher Himmelsverlauf
+CLOUD_DARKNESS=Wolkendunkelheit
+CLOUD_DARKNESS.comment=Wie dunkel der bedeckte Himmel und der Nebel sind. Niedriger = hellgrau, höher = schwer und dunkel
+CLOUD_VARIATION=Wolkenvariation
+CLOUD_VARIATION.comment=Große weiche hellere und dunklere Flecken in der Wolkendecke. 0 = vollkommen gleichmäßiges Grau
+CLOUD_HORIZON=Klarer Horizontstreifen
+CLOUD_HORIZON.comment=Höhe in Grad über dem Horizont, in der der Himmel einfarbig in Nebelfarbe ohne Flecken bleibt. Verbirgt ferne Berge am Rand der Sichtweite
+SKY_COOL=Blaustich des Himmels
+SKY_COOL.comment=Kalter blauer Farbton des bedeckten Himmels und des Nebels. 0 = neutrales Grau, 1 = deutlich blau
+
+TORCH_FLICKER=Feuerflackern
+TORCH_FLICKER.comment=Das Licht von Fackeln, Lagerfeuern und Lava flackert sanft. Fackeln und Laternen in der Hand flackern ebenfalls. Lampen können leicht mitflackern: der Shader kann sie nicht von Feuer unterscheiden
+FLICKER_STRENGTH=Flackerstärke
+FLICKER_STRENGTH.comment=Wie stark die Helligkeit schwankt. Höher = stärkeres, auffälligeres Flackern
+FLICKER_SPEED=Flackergeschwindigkeit
+FLICKER_SPEED.comment=Wie schnell das Licht schwankt. Niedriger = ruhiges langsames Atmen, höher = nervöses schnelles Flackern
+HELD_LIGHT=Licht von Gegenständen
+HELD_LIGHT.comment=Fackeln, Laternen, Leuchtstein und andere leuchtende Gegenstände erhellen ihre Umgebung: in deiner Hand, in den Händen von Mobs, auf dem Boden und in Rahmen. Kostet etwas FPS: jeder Pixel prüft die nahen Lichtquellen
+HELD_LIGHT_STRENGTH=Stärke des Gegenstandslichts
+HELD_LIGHT_STRENGTH.comment=Helligkeit des Lichts leuchtender Gegenstände
+HELD_LIGHT_RADIUS=Radius des Gegenstandslichts
+HELD_LIGHT_RADIUS.comment=Reichweite des Lichts im Verhältnis zur Lichtstufe des Gegenstands. 1 = so weit wie derselbe platzierte Block
+PORTAL_LIGHT=Portallicht
+PORTAL_LIGHT.comment=Das nächste Netherportal wirft echtes violettes Licht auf die Blöcke ringsum. Kostet etwas FPS: beleuchtete Pixel lesen die Portalposition aus einem Puffer
+PORTAL_LIGHT_STRENGTH=Stärke des Portallichts
+PORTAL_LIGHT_STRENGTH.comment=Helligkeit des violetten Portallichts
+PORTAL_LIGHT_RADIUS=Radius des Portallichts
+PORTAL_LIGHT_RADIUS.comment=Reichweite des Portallichts in Blöcken
+PORTAL_FRAME_TINT=Portalrahmen-Tönung
+PORTAL_FRAME_TINT.comment=Vom Portal beleuchteter Obsidian wird violett. Kostenlos, aber Obsidian neben Fackeln oder Lava kann sich ebenfalls färben
+ORE_LIGHT=Erzlicht
+ORE_LIGHT.comment=Erze werfen farbiges Licht auf benachbarte Blöcke, Mobs und Gegenstände in der Hand. Das Licht breitet sich um Ecken aus wie normales Licht und geht nicht durch Wände. Schwer: ein zusätzlicher Rechendurchlauf pro Bild und ein Lichtgitter-Zugriff pro Pixel. Aus = keine Kosten
+ORE_LIGHT_STRENGTH=Stärke des Erzlichts
+ORE_LIGHT_STRENGTH.comment=Helligkeit des farbigen Erzlichts
+ORE_LIGHT_RADIUS=Radius des Erzlichts
+ORE_LIGHT_RADIUS.comment=Wie viele Blöcke weit sich das Erzlicht ausbreitet. Höher = mehr Blöcke pro Bild zu berechnen = weniger FPS
+ORE_LIGHT_DIST=Reichweite des Erzlichts
+ORE_LIGHT_DIST.comment=Abstand in Blöcken um dich herum, in dem Erzlicht sichtbar ist. Es blendet beim Näherkommen sanft ein. Höher = mehr Blöcke pro Bild zu berechnen = weniger FPS
+
+ORE_GLOW=Erzleuchten
+ORE_GLOW.comment=Wie hell die farbigen Sprenkel der Erze im Dunkeln leuchten (Höhlen, Nacht). 0 = normale Erze
+ORE_DAY_GLOW=Erzleuchten am Tag
+ORE_DAY_GLOW.comment=Zusätzliches Leuchten der Erze bei Tageslicht, damit sie auf hellen Flächen sichtbar bleiben. 0 = wie im Dunkeln
+ORE_FADE_DIST=Abklingdistanz der Erze
+ORE_FADE_DIST.comment=Abstand in Blöcken, bei dem das Erzleuchten am schwächsten ist (siehe Fernleuchten der Erze)
+ORE_FAR_GLOW=Fernleuchten der Erze
+ORE_FAR_GLOW.comment=Anteil des Leuchtens, der bei der Abklingdistanz und darüber hinaus bleibt. 0 = ferne Erze leuchten nicht, 1 = kein Abklingen
+REDSTONE_GLOW=Redstone-Leuchten
+REDSTONE_GLOW.comment=Leuchten von Redstone-Fackeln, aktivem Redstone-Staub und anderen Redstone-Teilen. 0 = normales Aussehen
+PORTAL_GLOW=Netherportal-Leuchten
+PORTAL_GLOW.comment=Helligkeit der violett leuchtenden Fläche von Netherportalen. 0 = normales Aussehen
+MOB_EYES=Leuchtende Mob-Augen
+MOB_EYES.comment=Die Augen von Endermen, Spinnen und anderen Mobs leuchten im Dunkeln
+MOB_EYES_GLOW=Stärke der Mob-Augen
+MOB_EYES_GLOW.comment=Wie hell Mob-Augen aus der Nähe leuchten
+MOB_EYES_FADE_DIST=Abklingdistanz der Augen
+MOB_EYES_FADE_DIST.comment=Abstand in Blöcken, bei dem das Augenleuchten am schwächsten ist (siehe Fernleuchten der Augen)
+MOB_EYES_FAR_GLOW=Fernleuchten der Augen
+MOB_EYES_FAR_GLOW.comment=Augenhelligkeit bei der Abklingdistanz im Vergleich zur normalen Textur. Unter 1 = dunkler als normal, 1 = normale Augen
+
+RAIN_FOG=Regennebel
+RAIN_FOG.comment=Zusätzlicher Dunst, der bei Regen dichter wird, wenn du im Freien bist. Die Sichtweite bleibt gleich. 0 = kein Dunst
+RAIN_SKY_DARKNESS=Himmelsdunkelheit bei Regen
+RAIN_SKY_DARKNESS.comment=Wie stark sich Himmel und Nebel bei Regen verdunkeln. 0 = wie bei trockenem Wetter
+RAIN_OPACITY=Regendeckkraft
+RAIN_OPACITY.comment=Wie sichtbar Regentropfen und Schneeflocken dort sind, wo sie beleuchtet werden
+RAIN_THINNESS=Regenfeinheit
+RAIN_THINNESS.comment=Höher = dünnere, durchsichtigere Tropfen. 0 = dicke normale Streifen
+RAIN_BRIGHTNESS=Regenhelligkeit
+RAIN_BRIGHTNESS.comment=Helligkeit von Tropfen und Spritzern. Niedriger = dunkler und grauer, 1 = weiß bei Tageslicht. Tropfen nahe am Feuer bleiben beleuchtet
+FOG_GLOW=Fackelschein im Nebel
+FOG_GLOW.comment=Das Licht von Fackeln und Feuern streut im Regendunst und bildet einen warmen Lichthof um beleuchtete Orte. Nur bei Regen sichtbar
+FOG_GLOW_STRENGTH=Stärke des Nebelscheins
+FOG_GLOW_STRENGTH.comment=Helligkeit des warmen Lichthofs um Lichter im Regendunst
+LIGHTNING_BOLT=Verzweigter Blitz
+LIGHTNING_BOLT.comment=Zeichnet einen prozeduralen, verzweigten Blitz in den Himmel statt des normalen. Aus = normaler Blitz
+LIGHTNING_STRENGTH=Blitzlicht
+LIGHTNING_STRENGTH.comment=Wie stark ein Blitz den Himmel und die Welt erhellt. 0 = kein Aufleuchten
+SNOWIFY=Verschneite Welt
+SNOWIFY.comment=Winterlook: Gras und Laub werden mit weißem Reif überzogen, Oberseiten unter freiem Himmel werden mit Schnee bedeckt. Schnee schmilzt nahe Fackeln und Lava. Nur in der Oberwelt
+SNOW_AMOUNT=Schneemenge
+SNOW_AMOUNT.comment=Wie stark die Welt mit Schnee und Reif bedeckt ist
+SNOW_BRIGHTNESS=Schneehelligkeit
+SNOW_BRIGHTNESS.comment=Wie hell Schnee und Reif bei Tageslicht sind. 1 = reinweiß selbst unter bedecktem Himmel
+
+WATER_OPACITY=Wasserdeckkraft
+WATER_OPACITY.comment=Deckkraft der Wasseroberfläche von oben gesehen. Tiefes Wasser trübt sich von selbst, daher verschwindet der Grund mit der Tiefe
+WATER_BRIGHTNESS=Wasserhelligkeit
+WATER_BRIGHTNESS.comment=Helligkeit der dunkelgrauen Wasseroberfläche
+WATER_PATTERN=Wasseroberflächen-Muster
+WATER_PATTERN.comment=Wie viel der Wassertextur von oben durch die Trübung sichtbar ist. 0 = glattes trübes Wasser
+UNDERWATER_DENSITY=Unterwasser-Nebeldichte
+UNDERWATER_DENSITY.comment=Wie schnell die dunkelblaue Trübung die Sicht unter Wasser und durch die Oberfläche verschluckt. Höher = dichter, der Grund verschwindet früher
+ICE_OPACITY=Eisdeckkraft
+ICE_OPACITY.comment=Wie undurchsichtig Eis und Brucheis sind. Niedriger = durchsichtiger
+
+SWAY=Pflanzenbewegung
+SWAY.comment=Laub, Gras, Blumen und andere Pflanzen wiegen sich im Wind
+SWAY_STRENGTH=Bewegungsstärke
+SWAY_STRENGTH.comment=Wie weit sich Laub und Pflanzen bewegen
+SWAY_SPEED=Bewegungsgeschwindigkeit
+SWAY_SPEED.comment=Wie schnell sich Laub und Pflanzen bewegen
+STORM_SWAY=Bewegung bei Sturm
+STORM_SWAY.comment=Wie stark Regen und Gewitter Geschwindigkeit und Ausschlag der Bewegung erhöhen. 0 = Wetter hat keinen Einfluss
+
+NETHER_BRIGHTNESS=Nether-Helligkeit
+NETHER_BRIGHTNESS.comment=Helligkeit des Umgebungslichts und des Nebels im Nether. Wirkt nur auf dunkle Stellen: Lava, Feuer und Fackeln bleiben genauso hell
+NETHER_HAZE=Hitzeflimmern im Nether
+NETHER_HAZE.comment=Die Ferne im Nether flimmert wie heiße Luft über einem Feuer. Nahe Blöcke und Hände bleiben scharf. Kostet etwas FPS, nur im Nether: ein zusätzlicher Vollbild-Durchlauf mit Tiefenabfrage
+NETHER_HAZE_STRENGTH=Stärke des Hitzeflimmerns
+NETHER_HAZE_STRENGTH.comment=Wie stark das Flimmern das Bild verzerrt
+NETHER_HAZE_DIST=Distanz des Hitzeflimmerns
+NETHER_HAZE_DIST.comment=Abstand in Blöcken, ab dem das Flimmern beginnt. Volle Stärke erreicht es beim 2.5-fachen dieser Distanz
+NETHER_HAZE_SPEED_MIN=Min. Flimmergeschwindigkeit
+NETHER_HAZE_SPEED_MIN.comment=Langsamste Flimmergeschwindigkeit. Die Geschwindigkeit wandert sanft zwischen Min. und Max., wie Böen heißer Luft. Beide gleich setzen für konstante Geschwindigkeit
+NETHER_HAZE_SPEED_MAX=Max. Flimmergeschwindigkeit
+NETHER_HAZE_SPEED_MAX.comment=Schnellste Flimmergeschwindigkeit während einer Böe
+END_BRIGHTNESS=End-Helligkeit
+END_BRIGHTNESS.comment=Helligkeit des Umgebungslichts, des Himmels und des Nebels im End. Wirkt nur auf dunkle Stellen: Fackeln bleiben genauso hell
+
+DESATURATION=Entsättigung
+DESATURATION.comment=Bleicht die Farben des gesamten Bildes aus. 0 = Originalfarben, 1 = schwarz-weiß
+NIGHT_DESATURATION=Entsättigung im Dunkeln
+NIGHT_DESATURATION.comment=Wie stark Farben in dunklen Bereichen (Nacht, Höhlen, Schatten) zu kaltem Grau verblassen. 0 = dunkle Bereiche behalten ihre Farben
+HIGHLIGHT_BOOST=Lichtverstärkung bei Nacht
+HIGHLIGHT_BOOST.comment=Macht helle Stellen (Feuer, Fackeln, Lava) nachts heller, damit sie aus der Dunkelheit hervortreten. Am Tag ohne Wirkung. Im Nether und End immer aktiv
+
+GLOW=Leuchten
+GLOW.comment=Weiches Leuchten um helle Bereiche und ein leichter Dunst über dem ganzen Bild. Kostet etwas FPS
+GLOW_STRENGTH=Leuchtstärke
+GLOW_STRENGTH.comment=Stärke des Leuchtens um helle Bereiche. 0 = nur Dunst, kein Leuchten
+CHROMA=Chromatische Aberration
+CHROMA.comment=Rot-blaue Farbsäume an den Bildschirmrändern, wie bei einem billigen Objektiv. Die Bildmitte bleibt sauber
+CHROMA_STRENGTH=Aberrationsstärke
+CHROMA_STRENGTH.comment=Wie weit der rote und blaue Kanal an den Rändern verschoben werden
+CHROMA_OPACITY=Aberrationsdeckkraft
+CHROMA_OPACITY.comment=Wie stark die verschobenen Farben eingemischt werden. Niedriger = dezenterer Effekt
+FILM_GRAIN=Filmkorn
+FILM_GRAIN.comment=Animiertes Filmkorn über dem Bild
+GRAIN_OPACITY=Korndeckkraft
+GRAIN_OPACITY.comment=Wie sichtbar das Korn ist. Niedriger = durchsichtiger
+GRAIN_CONTRAST=Kornkontrast
+GRAIN_CONTRAST.comment=Niedrig = weiches schwaches Kräuseln, hoch = harte deutliche Körnchen
+GRAIN_SIZE=Korngröße
+GRAIN_SIZE.comment=Korngröße in Pixeln. Über 1 = größeres, weicheres Korn
+GRAIN_COLOR=Kornfarbe
+GRAIN_COLOR.comment=0 = graues Korn, 1 = vollständig farbiges Korn
+GRAIN_DENSITY=Korndichte
+GRAIN_DENSITY.comment=Anteil der Pixel mit Korn. Niedriger = vereinzelte Körnchen, 1 = dichtes Korn überall
+VIGNETTE=Vignette
+VIGNETTE.comment=Dunkelt die Ecken und Ränder des Bildschirms ab
+
+FXAA=Kantenglättung (FXAA)
+FXAA.comment=Glättet gezackte Blockkanten. Kostet etwas FPS: ein paar zusätzliche Abfragen pro Pixel, die Glättung selbst läuft nur an kontrastreichen Kanten
+FXAA_STRENGTH=FXAA-Stärke
+FXAA_STRENGTH.comment=Wie viel des geglätteten Bildes eingemischt wird. Niedriger = schärfer, aber gezacktere Kanten
+SHARPEN=Schärfen
+SHARPEN.comment=Leichtes Nachschärfen, holt Details zurück. Kostet etwas FPS
+SHARPEN_STRENGTH=Schärfestärke
+SHARPEN_STRENGTH.comment=Wie stark nachgeschärft wird. Zu hoch = helle Säume um Kanten
+
+LOW_HEALTH=Effekt bei wenig Leben
+LOW_HEALTH.comment=Bei wenig Leben pulsieren die Bildschirmränder rot im Herzschlag und die Farben verblassen
+LOW_HEALTH_STRENGTH=Stärke des Lebenseffekts
+LOW_HEALTH_STRENGTH.comment=Wie stark der Effekt bei wenig Leben ist
+LOW_AIR=Effekt bei Luftmangel
+LOW_AIR.comment=Wenn dir unter Wasser die Luft ausgeht, wird die Sicht dunkler, enger und farbloser
+LOW_AIR_STRENGTH=Stärke des Lufteffekts
+LOW_AIR_STRENGTH.comment=Wie stark der Effekt bei Luftmangel ist
+INTRO_TITLE=Intro-Titel
+INTRO_TITLE.comment=Zeigt nach dem Laden für ein paar Sekunden Shadername, Version und Autor an
+INTRO_POSITION=Position des Intro-Titels
+INTRO_POSITION.comment=Bildschirmecke, in der der Intro-Titel erscheint
+value.INTRO_POSITION.0=Oben rechts
+value.INTRO_POSITION.1=Oben links
+value.INTRO_POSITION.2=Unten rechts
+value.INTRO_POSITION.3=Unten links

@@ -1,0 +1,203 @@
+LEGEND=Colore del nome = costo: {G}verde{R} - gratis, {Y}giallo{R} - un po' di FPS, {C}rosso{R} - pesante
+screen.LIGHTING=Illuminazione e ora del giorno
+screen.SKY=Cielo e nuvole
+screen.LIGHTS=Luce dinamica
+screen.EMISSIVE=Blocchi e mob luminosi
+screen.WEATHER=Meteo e neve
+screen.WATER=Acqua e ghiaccio
+screen.FOLIAGE=Vegetazione
+screen.DIMENSIONS=Nether e End
+screen.COLOR=Colore
+screen.POST=Effetti fotocamera
+screen.AA=Antialiasing e nitidezza
+screen.HUD=Stato e interfaccia
+
+NIGHT_BRIGHTNESS=Luminosità notturna
+NIGHT_BRIGHTNESS.comment=Luminosità del cielo notturno, della nebbia e della luce lunare sul mondo. 0 = notte completamente buia, illuminano solo le torce
+DAY_GLOOM=Giornata cupa
+DAY_GLOOM.comment=Luce di una giornata coperta: scurisce cielo e nebbia di giorno, approfondisce le ombre e spegne i colori di erba e foglie. 0 = giornata luminosa normale
+CAVE_LIGHT=Luce diurna nelle grotte
+CAVE_LIGHT.comment=Quanta luce del giorno raggiunge gli ingressi delle grotte, le sporgenze e le zone sotto gli alberi. 0 = quasi nero. Le grotte profonde restano buie con qualsiasi valore
+TWILIGHT_STRENGTH=Tinta del crepuscolo
+TWILIGHT_STRENGTH.comment=Tinta arancione calda di alba/tramonto e blu del crepuscolo su cielo, nebbia e illuminazione. 0 = nessuna tinta
+TWILIGHT_LENGTH=Durata del crepuscolo
+TWILIGHT_LENGTH.comment=Quanto durano alba e tramonto. Più basso = breve e brusco, più alto = passaggio lungo e morbido tra giorno e notte
+
+CLOUDS=Nuvole
+CLOUDS.comment=Coltre grigio scuro immobile su tutto il cielo, come in una lunga giornata di pioggia. Disattivato = semplice sfumatura del cielo
+CLOUD_DARKNESS=Oscurità delle nuvole
+CLOUD_DARKNESS.comment=Quanto sono scuri il cielo coperto e la nebbia. Più basso = grigio chiaro, più alto = pesante e scuro
+CLOUD_VARIATION=Variazione delle nuvole
+CLOUD_VARIATION.comment=Grandi macchie morbide più chiare e più scure nella coltre. 0 = grigio perfettamente uniforme
+CLOUD_HORIZON=Fascia libera all'orizzonte
+CLOUD_HORIZON.comment=Altezza in gradi sopra l'orizzonte in cui il cielo resta del colore uniforme della nebbia, senza macchie. Nasconde le montagne lontane al limite della distanza di rendering
+SKY_COOL=Tinta blu del cielo
+SKY_COOL.comment=Tinta blu fredda del cielo coperto e della nebbia. 0 = grigio neutro, 1 = decisamente blu
+
+TORCH_FLICKER=Tremolio del fuoco
+TORCH_FLICKER.comment=La luce di torce, falò e lava tremola dolcemente. Anche torce e lanterne in mano tremolano. Le lampade possono tremolare leggermente: lo shader non le distingue dal fuoco
+FLICKER_STRENGTH=Intensità del tremolio
+FLICKER_STRENGTH.comment=Quanto oscilla la luminosità. Più alto = tremolio più forte e visibile
+FLICKER_SPEED=Velocità del tremolio
+FLICKER_SPEED.comment=Quanto velocemente oscilla la luce. Più basso = respiro lento e calmo, più alto = tremolio rapido e nervoso
+HELD_LIGHT=Luce degli oggetti
+HELD_LIGHT.comment=Torce, lanterne, pietra luminosa e altri oggetti luminosi illuminano i dintorni: nelle tue mani, in quelle dei mob, a terra e nelle cornici. Costa un po' di FPS: ogni pixel controlla le fonti di luce vicine
+HELD_LIGHT_STRENGTH=Intensità luce degli oggetti
+HELD_LIGHT_STRENGTH.comment=Luminosità della luce degli oggetti luminosi
+HELD_LIGHT_RADIUS=Raggio luce degli oggetti
+HELD_LIGHT_RADIUS.comment=Portata della luce rispetto al livello di luce dell'oggetto. 1 = come lo stesso blocco piazzato
+PORTAL_LIGHT=Luce del portale
+PORTAL_LIGHT.comment=Il portale del Nether più vicino proietta una vera luce viola sui blocchi intorno. Costa un po' di FPS: i pixel illuminati leggono la posizione del portale da un buffer
+PORTAL_LIGHT_STRENGTH=Intensità luce del portale
+PORTAL_LIGHT_STRENGTH.comment=Luminosità della luce viola del portale
+PORTAL_LIGHT_RADIUS=Raggio luce del portale
+PORTAL_LIGHT_RADIUS.comment=Portata della luce del portale, in blocchi
+PORTAL_FRAME_TINT=Tinta della cornice del portale
+PORTAL_FRAME_TINT.comment=L'ossidiana illuminata da un portale diventa viola. Gratis, ma anche l'ossidiana vicino a torce o lava può colorarsi
+ORE_LIGHT=Luce dei minerali
+ORE_LIGHT.comment=I minerali proiettano luce colorata su blocchi vicini, mob e oggetti in mano. La luce gira intorno agli angoli come la luce normale e non attraversa i muri. Pesante: un passaggio di calcolo in più a ogni fotogramma e una lettura della griglia di luce per pixel. Disattivato = nessun costo
+ORE_LIGHT_STRENGTH=Intensità luce dei minerali
+ORE_LIGHT_STRENGTH.comment=Luminosità della luce colorata dei minerali
+ORE_LIGHT_RADIUS=Raggio luce dei minerali
+ORE_LIGHT_RADIUS.comment=Per quanti blocchi si diffonde la luce dei minerali. Più alto = più blocchi da calcolare a ogni fotogramma = meno FPS
+ORE_LIGHT_DIST=Distanza luce dei minerali
+ORE_LIGHT_DIST.comment=Distanza in blocchi intorno a te entro cui la luce dei minerali è visibile. Appare gradualmente avvicinandosi. Più alto = più blocchi da calcolare a ogni fotogramma = meno FPS
+
+ORE_GLOW=Bagliore dei minerali
+ORE_GLOW.comment=Quanto brillano le macchie colorate dei minerali al buio (grotte, notte). 0 = minerali normali
+ORE_DAY_GLOW=Bagliore diurno dei minerali
+ORE_DAY_GLOW.comment=Bagliore extra dei minerali alla luce del giorno, così restano visibili sulle superfici chiare. 0 = come al buio
+ORE_FADE_DIST=Distanza di attenuazione minerali
+ORE_FADE_DIST.comment=Distanza in blocchi a cui il bagliore dei minerali raggiunge il minimo (vedi Bagliore lontano dei minerali)
+ORE_FAR_GLOW=Bagliore lontano dei minerali
+ORE_FAR_GLOW.comment=Parte del bagliore mantenuta alla distanza di attenuazione e oltre. 0 = i minerali lontani non brillano, 1 = nessuna attenuazione
+REDSTONE_GLOW=Bagliore della redstone
+REDSTONE_GLOW.comment=Bagliore di torce di redstone, polvere di redstone attiva e altre parti di redstone. 0 = aspetto normale
+PORTAL_GLOW=Bagliore del portale del Nether
+PORTAL_GLOW.comment=Luminosità della superficie viola dei portali del Nether. 0 = aspetto normale
+MOB_EYES=Occhi luminosi dei mob
+MOB_EYES.comment=Gli occhi di enderman, ragni e altri mob brillano al buio
+MOB_EYES_GLOW=Intensità occhi dei mob
+MOB_EYES_GLOW.comment=Luminosità degli occhi dei mob da vicino
+MOB_EYES_FADE_DIST=Distanza di attenuazione occhi
+MOB_EYES_FADE_DIST.comment=Distanza in blocchi a cui il bagliore degli occhi raggiunge il minimo (vedi Bagliore lontano degli occhi)
+MOB_EYES_FAR_GLOW=Bagliore lontano degli occhi
+MOB_EYES_FAR_GLOW.comment=Luminosità degli occhi alla distanza di attenuazione rispetto alla texture normale. Sotto 1 = più tenui del normale, 1 = occhi normali
+
+RAIN_FOG=Nebbia da pioggia
+RAIN_FOG.comment=Foschia extra che si infittisce durante la pioggia quando sei all'aperto. La distanza di rendering non cambia. 0 = nessuna foschia
+RAIN_SKY_DARKNESS=Oscurità del cielo con pioggia
+RAIN_SKY_DARKNESS.comment=Quanto si scuriscono cielo e nebbia quando piove. 0 = come con tempo asciutto
+RAIN_OPACITY=Opacità della pioggia
+RAIN_OPACITY.comment=Quanto sono visibili gocce di pioggia e fiocchi di neve dove sono illuminati
+RAIN_THINNESS=Sottigliezza della pioggia
+RAIN_THINNESS.comment=Più alto = gocce più sottili e trasparenti. 0 = strisce spesse normali
+RAIN_BRIGHTNESS=Luminosità della pioggia
+RAIN_BRIGHTNESS.comment=Luminosità di gocce e schizzi. Più basso = più scure e grigie, 1 = bianche alla luce del giorno. Le gocce vicino al fuoco restano illuminate
+FOG_GLOW=Alone delle torce nella nebbia
+FOG_GLOW.comment=La luce di torce e fuochi si diffonde nella foschia della pioggia creando un alone caldo intorno ai luoghi illuminati. Visibile solo quando piove
+FOG_GLOW_STRENGTH=Intensità dell'alone nella nebbia
+FOG_GLOW_STRENGTH.comment=Luminosità dell'alone caldo intorno alle luci nella foschia della pioggia
+LIGHTNING_BOLT=Fulmine ramificato
+LIGHTNING_BOLT.comment=Disegna nel cielo un fulmine ramificato procedurale al posto di quello normale. Disattivato = fulmine normale
+LIGHTNING_STRENGTH=Luce del fulmine
+LIGHTNING_STRENGTH.comment=Quanto il lampo del fulmine illumina il cielo e il mondo. 0 = nessun lampo
+SNOWIFY=Mondo innevato
+SNOWIFY.comment=Aspetto invernale: erba e foglie si coprono di brina bianca, le facce superiori a cielo aperto si coprono di neve. La neve si scioglie vicino a torce e lava. Solo nell'Overworld
+SNOW_AMOUNT=Quantità di neve
+SNOW_AMOUNT.comment=Quanto il mondo è coperto di neve e brina
+SNOW_BRIGHTNESS=Luminosità della neve
+SNOW_BRIGHTNESS.comment=Quanto sono luminose neve e brina alla luce del giorno. 1 = bianco puro anche sotto il cielo coperto
+
+WATER_OPACITY=Opacità dell'acqua
+WATER_OPACITY.comment=Opacità della superficie dell'acqua vista dall'alto. L'acqua profonda si intorbidisce da sola, quindi il fondo svanisce con la profondità
+WATER_BRIGHTNESS=Luminosità dell'acqua
+WATER_BRIGHTNESS.comment=Luminosità della superficie grigio scuro dell'acqua
+WATER_PATTERN=Motivo della superficie
+WATER_PATTERN.comment=Quanto della texture dell'acqua si vede attraverso la torbidezza dall'alto. 0 = acqua torbida uniforme
+UNDERWATER_DENSITY=Densità nebbia subacquea
+UNDERWATER_DENSITY.comment=Quanto velocemente la torbidezza blu scura nasconde la vista sott'acqua e attraverso la superficie. Più alto = più densa, il fondo sparisce prima
+ICE_OPACITY=Opacità del ghiaccio
+ICE_OPACITY.comment=Quanto sono opachi il ghiaccio e il ghiaccio brinato. Più basso = più trasparente
+
+SWAY=Ondeggiamento delle piante
+SWAY.comment=Foglie, erba, fiori e altre piante ondeggiano al vento
+SWAY_STRENGTH=Intensità dell'ondeggiamento
+SWAY_STRENGTH.comment=Quanto si muovono foglie e piante
+SWAY_SPEED=Velocità dell'ondeggiamento
+SWAY_SPEED.comment=Quanto velocemente si muovono foglie e piante
+STORM_SWAY=Ondeggiamento in tempesta
+STORM_SWAY.comment=Quanto pioggia e temporali aumentano velocità e ampiezza dell'ondeggiamento. 0 = il meteo non influisce
+
+NETHER_BRIGHTNESS=Luminosità del Nether
+NETHER_BRIGHTNESS.comment=Luminosità della luce ambientale e della nebbia del Nether. Influisce solo sulle zone buie: lava, fuoco e torce restano luminosi come prima
+NETHER_HAZE=Foschia di calore del Nether
+NETHER_HAZE.comment=In lontananza il Nether tremola come l'aria calda sopra un fuoco. Blocchi vicini e mani restano nitidi. Costa un po' di FPS, solo nel Nether: un passaggio extra a schermo intero con lettura della profondità
+NETHER_HAZE_STRENGTH=Intensità della foschia di calore
+NETHER_HAZE_STRENGTH.comment=Quanto la foschia deforma l'immagine
+NETHER_HAZE_DIST=Distanza della foschia di calore
+NETHER_HAZE_DIST.comment=Distanza in blocchi da cui inizia la foschia. Raggiunge la piena intensità a 2.5 volte questa distanza
+NETHER_HAZE_SPEED_MIN=Velocità min. della foschia
+NETHER_HAZE_SPEED_MIN.comment=Velocità di tremolio più lenta. La velocità varia dolcemente tra min. e max. come raffiche di aria calda. Impostale uguali per una velocità costante
+NETHER_HAZE_SPEED_MAX=Velocità max. della foschia
+NETHER_HAZE_SPEED_MAX.comment=Velocità di tremolio più rapida durante una raffica
+END_BRIGHTNESS=Luminosità dell'End
+END_BRIGHTNESS.comment=Luminosità della luce ambientale, del cielo e della nebbia dell'End. Influisce solo sulle zone buie: le torce restano luminose come prima
+
+DESATURATION=Desaturazione
+DESATURATION.comment=Sbiadisce i colori di tutta l'immagine. 0 = colori originali, 1 = bianco e nero
+NIGHT_DESATURATION=Desaturazione al buio
+NIGHT_DESATURATION.comment=Quanto i colori virano verso un grigio freddo nelle zone buie (notte, grotte, ombre). 0 = le zone buie mantengono i colori
+HIGHLIGHT_BOOST=Potenziamento notturno delle luci
+HIGHLIGHT_BOOST.comment=Rende più luminosi di notte i punti chiari (fuoco, torce, lava) perché risaltino nel buio. Nessun effetto di giorno. Sempre attivo nel Nether e nell'End
+
+GLOW=Bagliore
+GLOW.comment=Bagliore morbido intorno alle zone luminose e leggera foschia su tutta l'immagine. Costa un po' di FPS
+GLOW_STRENGTH=Intensità del bagliore
+GLOW_STRENGTH.comment=Intensità del bagliore intorno alle zone luminose. 0 = solo foschia, nessun bagliore
+CHROMA=Aberrazione cromatica
+CHROMA.comment=Frange colorate rosso/blu ai bordi dello schermo, come in un obiettivo economico. Il centro dello schermo resta pulito
+CHROMA_STRENGTH=Intensità dell'aberrazione
+CHROMA_STRENGTH.comment=Quanto vengono spostati i canali rosso e blu ai bordi
+CHROMA_OPACITY=Opacità dell'aberrazione
+CHROMA_OPACITY.comment=Quanto vengono miscelati i colori spostati. Più basso = effetto più delicato
+FILM_GRAIN=Grana della pellicola
+FILM_GRAIN.comment=Grana della pellicola animata sull'immagine
+GRAIN_OPACITY=Opacità della grana
+GRAIN_OPACITY.comment=Quanto è visibile la grana. Più basso = più trasparente
+GRAIN_CONTRAST=Contrasto della grana
+GRAIN_CONTRAST.comment=Basso = increspatura morbida e lieve, alto = granelli duri e netti
+GRAIN_SIZE=Dimensione della grana
+GRAIN_SIZE.comment=Dimensione della grana in pixel. Sopra 1 = grana più grande e morbida
+GRAIN_COLOR=Colore della grana
+GRAIN_COLOR.comment=0 = grana grigia, 1 = grana completamente colorata
+GRAIN_DENSITY=Densità della grana
+GRAIN_DENSITY.comment=Parte dei pixel coperti dalla grana. Più basso = granelli radi e separati, 1 = grana fitta ovunque
+VIGNETTE=Vignettatura
+VIGNETTE.comment=Scurisce gli angoli e i bordi dello schermo
+
+FXAA=Antialiasing (FXAA)
+FXAA.comment=Smussa i bordi seghettati dei blocchi. Costa un po' di FPS: qualche lettura in più per pixel, lo smussamento agisce solo sui bordi contrastati
+FXAA_STRENGTH=Intensità FXAA
+FXAA_STRENGTH.comment=Quanto dell'immagine smussata viene miscelato. Più basso = più nitido ma bordi più seghettati
+SHARPEN=Nitidezza
+SHARPEN.comment=Leggero aumento della nitidezza che recupera dettagli. Costa un po' di FPS
+SHARPEN_STRENGTH=Intensità della nitidezza
+SHARPEN_STRENGTH.comment=Quanto è forte l'aumento di nitidezza. Troppo alto = aloni chiari intorno ai bordi
+
+LOW_HEALTH=Effetto salute bassa
+LOW_HEALTH.comment=Con poca salute i bordi dello schermo pulsano di rosso al ritmo del battito e i colori sbiadiscono
+LOW_HEALTH_STRENGTH=Intensità effetto salute
+LOW_HEALTH_STRENGTH.comment=Quanto è forte l'effetto di salute bassa
+LOW_AIR=Effetto mancanza d'aria
+LOW_AIR.comment=Quando sott'acqua stai finendo l'aria, la vista si scurisce, si restringe e perde colore
+LOW_AIR_STRENGTH=Intensità effetto aria
+LOW_AIR_STRENGTH.comment=Quanto è forte l'effetto di mancanza d'aria
+INTRO_TITLE=Titolo iniziale
+INTRO_TITLE.comment=Mostra nome dello shader, versione e autore per un paio di secondi dopo il caricamento
+INTRO_POSITION=Posizione del titolo
+INTRO_POSITION.comment=Angolo dello schermo in cui appare il titolo iniziale
+value.INTRO_POSITION.0=In alto a destra
+value.INTRO_POSITION.1=In alto a sinistra
+value.INTRO_POSITION.2=In basso a destra
+value.INTRO_POSITION.3=In basso a sinistra
