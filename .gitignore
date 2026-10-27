@@ -1,1 +1,19 @@
 *.zip
+
+# mod build output and gradle caches
+mods/build/
+mods/.gradle/
+mods/run/
+mods/out/
+mods/bin/
+mods/.kotlin/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+mods/.settings/
+mods/.classpath
+mods/.project

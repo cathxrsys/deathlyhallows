@@ -61,11 +61,21 @@
 
 Поддерживается [Distant Horizons](https://modrinth.com/mod/distanthorizons): дальние LOD получают то же освещение, туман, снег и мутную воду, а туман отодвигается к границе дальности DH.
 
+## Мод-дополнение
+
+В папке `mods/` лежит необязательный клиентский мод для Fabric (Minecraft 1.21.1), дополнение к шейдеру. Версия мода совпадает с версией шейдера: `deathlyhallows_2.0.0.jar` для шейдера V2.0.0.
+
+- **Realistic Thunder**: гром слышен только когда звук дошел до игрока (скорость звука настраивается, по умолчанию 300 м/с), дальний гром тише и глуше.
+- **Distant Lightning**: во время грозы симулирует удары молний на расстоянии до 20 км: слабая вспышка у горизонта и запоздалый раскат.
+
+Настройки открываются через [Mod Menu](https://modrinth.com/mod/modmenu). Сборка: `mods/build.sh` (jar в `mods/build/`), установка в `~/.minecraft/mods`: `mods/install.sh`.
+
 ## Структура проекта
 
 - `shaders/`: сам шейдер. Общий код в `shaders/lib/`, опции в `shaders/lib/settings.glsl`.
 - `lang_src/`: читаемые переводы в UTF-8; `lang_src/gen.py` собирает из них `shaders/lang/*.lang`.
 - `setup.sh`: собирает zip и устанавливает его в папку шейдеров.
+- `mods/`: мод-дополнение для Fabric.
 
 ---
 
@@ -130,8 +140,18 @@ A lightweight, deeply atmospheric shader pack for Minecraft (Iris). Gloomy overc
 
 Iris is required. Dynamic held-item light, portal light and ore light rely on SSBOs and compute shaders, so these parts are unavailable on other loaders. The rest of the pack works without them.
 
+## Companion mod
+
+The `mods/` folder holds an optional client-side Fabric mod (Minecraft 1.21.1), a companion to the shader pack. The mod version matches the shader version: `deathlyhallows_2.0.0.jar` goes with shader V2.0.0.
+
+- **Realistic Thunder**: thunder is heard only once its sound reaches the player (configurable speed of sound, 300 m/s by default); distant thunder is quieter and lower.
+- **Distant Lightning**: simulates strikes up to 20 km away during thunderstorms: a dim flash near the horizon and a delayed rumble.
+
+Settings open through [Mod Menu](https://modrinth.com/mod/modmenu). Build with `mods/build.sh` (jar goes to `mods/build/`), install into `~/.minecraft/mods` with `mods/install.sh`.
+
 ## Project layout
 
 - `shaders/`: the shader pack itself. Shared code is in `shaders/lib/`, options are in `shaders/lib/settings.glsl`.
 - `lang_src/`: readable UTF-8 translations; `lang_src/gen.py` builds `shaders/lang/*.lang` from them.
 - `setup.sh`: builds the zip and installs it into the shaderpacks folder.
+- `mods/`: the companion Fabric mod.

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "deathlyhallows",
+  "version": "${version}",
+  "name": "Deathly Hallows",
+  "description": "Companion mod for the Deathly Hallows shader pack.",
+  "authors": ["cathxrsys"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.cathxrsys.deathlyhallows.DeathlyHallowsClient"],
+    "modmenu": ["com.cathxrsys.deathlyhallows.ModMenuIntegration"]
+  },
+  "mixins": ["deathlyhallows.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

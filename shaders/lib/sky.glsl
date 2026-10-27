@@ -3,6 +3,7 @@
 uniform float boltOn;
 uniform float boltFade;
 uniform float boltGlow;
+uniform float boltFar;
 uniform float frameTimeCounter;
 uniform float rainStrength;
 uniform ivec2 eyeBrightnessSmooth;
@@ -176,7 +177,8 @@ float getFlash() {
     // a bolt lives for a varying time: the tail is cut at a random decay level
     float alive = step(mix(0.1, 0.8, rTail), boltGlow);
 
-    return max(main, pulse * alive * 0.8) * LIGHTNING_STRENGTH;
+    // a strike kilometers away lights the sky much less than one next to you
+    return max(main, pulse * alive * 0.8) * LIGHTNING_STRENGTH * (1.0 - boltFar);
 }
 
 // Everything below that depends only on sunAngle and time is per-frame, not per-pixel: it is computed
