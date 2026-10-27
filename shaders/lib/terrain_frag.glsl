@@ -67,7 +67,7 @@ void main() {
     c.rgb = max(c.rgb, getEmission(matId, tex.rgb, glcolor.rgb, fogDist) * dayGlow);
 
     if (isEyeInWater == 0) {
-        float fogAmt = getFogAmount(fogDist, far);
+        float fogAmt = getFogAmount(fogDist, FOG_FAR);
         c.rgb = mix(c.rgb, frameFog, fogAmt) + getFogGlow(fogAmt, fogDist, lmcoord.x, flick);
     } else if (isEyeInWater == 1) {
         c.rgb = underwaterFog(c.rgb, fogDist, sunAngle);

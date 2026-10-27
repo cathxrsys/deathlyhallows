@@ -25,7 +25,7 @@ void main() {
 #endif
 
     if (isEyeInWater == 0) {
-        c.rgb = mix(c.rgb, frameFog, getFogAmount(fogDist, far));
+        c.rgb = mix(c.rgb, frameFog, getFogAmount(fogDist, FOG_FAR));
     } else if (isEyeInWater == 1) {
         c.rgb = underwaterFog(c.rgb, fogDist, sunAngle);
     }

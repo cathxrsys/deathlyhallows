@@ -54,6 +54,14 @@ float getHazeAmount(float dist, float r) {
     return (1.0 - exp(-0.008 * r * dist)) * min(0.6 * r, 0.95);
 }
 
+// fog edge distance: with Distant Horizons the fog hides the LOD edge instead of the vanilla render distance
+#ifdef DISTANT_HORIZONS
+uniform int dhRenderDistance;
+#define FOG_FAR float(dhRenderDistance)
+#else
+#define FOG_FAR far
+#endif
+
 // fog amount at distance dist: normally it only hides the render distance edge (0.3 far .. 0.9 far),
 // in rain the haze is added on top, starting right at the player
 float getFogAmount(float dist, float farDist) {

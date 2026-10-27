@@ -2,7 +2,7 @@
 
 Лёгкий и очень атмосферный шейдер для Minecraft (Iris). Пасмурные дни, холодные синие ночи, светящиеся в темноте руды и тяжёлый дождь: мир, в котором не хочется оставаться под открытым небом, при этом без просадок FPS.
 
-**Версия 1.9.3**
+**Версия 2.0.0**
 
 ![Скриншот 1](images/image1.jpg)
 ![Скриншот 2](images/image2.jpg)
@@ -59,6 +59,8 @@
 
 Нужен Iris. Динамический свет предметов, свет порталов и руд использует SSBO и compute-шейдеры, поэтому на других загрузчиках эти части недоступны. Остальное работает и без них.
 
+Поддерживается [Distant Horizons](https://modrinth.com/mod/distanthorizons): дальние LOD получают то же освещение, туман, снег и мутную воду, а туман отодвигается к границе дальности DH.
+
 ## Структура проекта
 
 - `shaders/`: сам шейдер. Общий код в `shaders/lib/`, опции в `shaders/lib/settings.glsl`.
@@ -71,7 +73,7 @@
 
 A lightweight, deeply atmospheric shader pack for Minecraft (Iris). Gloomy overcast days, cold blue nights, glowing ores in the dark and heavy rain: it is built to feel like a world you would rather not be caught outside in, without eating your framerate.
 
-**Version 1.9.3**
+**Version 2.0.0**
 
 ![Screenshot 1](images/image1.jpg)
 ![Screenshot 2](images/image2.jpg)

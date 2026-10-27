@@ -13,6 +13,11 @@ uniform sampler2D colortex7; // rain/snow from gbuffers_weather (color * alpha, 
 uniform sampler2D depthtex0;
 uniform sampler2D depthtex1;
 uniform mat4 gbufferProjectionInverse;
+#ifdef DISTANT_HORIZONS
+uniform sampler2D dhDepthTex0;
+uniform sampler2D dhDepthTex1;
+uniform mat4 dhProjectionInverse;
+#endif
 uniform float sunAngle;
 uniform float far;
 uniform int isEyeInWater;
@@ -21,8 +26,8 @@ in vec2 texcoord;
 
 /* RENDERTARGETS: 0 */
 
-float viewDist(vec2 uv, float depth) {
-    vec4 p = gbufferProjectionInverse * vec4(uv * 2.0 - 1.0, depth * 2.0 - 1.0, 1.0);
+float viewDist(vec2 uv, float depth, mat4 projInv) {
+    vec4 p = projInv * vec4(uv * 2.0 - 1.0, depth * 2.0 - 1.0, 1.0);
     return length(p.xyz / p.w);
 }
 
@@ -35,10 +40,20 @@ void main() {
     if (isEyeInWater == 0 && mask > 0.5) {
         float d0 = texture(depthtex0, texcoord).r;
         float d1 = texture(depthtex1, texcoord).r;
-        float thickness = d1 >= 1.0 ? 64.0 : min(viewDist(texcoord, d1) - viewDist(texcoord, d0), 64.0);
+        mat4 projInv = gbufferProjectionInverse;
+#ifdef DISTANT_HORIZONS
+        // no vanilla geometry here: the water is a Distant Horizons LOD with its own depth buffers
+        if (d0 >= 1.0) {
+            d0 = texture(dhDepthTex0, texcoord).r;
+            d1 = texture(dhDepthTex1, texcoord).r;
+            projInv = dhProjectionInverse;
+        }
+#endif
+        float dist0 = viewDist(texcoord, d0, projInv);
+        float thickness = d1 >= 1.0 ? 64.0 : min(viewDist(texcoord, d1, projInv) - dist0, 64.0);
         float murk = 1.0 - exp(-max(thickness, 0.0) * UNDERWATER_DENSITY);
         // near the horizon regular fog already covers the water (gbuffers_terrain): dim the murk by the same factor
-        float horizon = 1.0 - getFogAmount(viewDist(texcoord, d0), far);
+        float horizon = 1.0 - getFogAmount(dist0, FOG_FAR);
         murk *= horizon;
         // glowing entities (glow squid) are visible through water: murk and the surface pattern are weaker on them but do not vanish
         float glow = texture(colortex6, texcoord).r;

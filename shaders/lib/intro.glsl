@@ -1,7 +1,7 @@
 // title text shown when the shader loads: a 3x5 font baked into bit masks
 // frameTimeCounter is declared in sky.glsl
 
-const int INTRO_LINE1[] = int[](68, 69, 65, 84, 72, 76, 89, 32, 72, 65, 76, 76, 79, 87, 83, 32, 86, 49, 46, 57, 46, 51); // DEATHLY HALLOWS V1.9.3
+const int INTRO_LINE1[] = int[](68, 69, 65, 84, 72, 76, 89, 32, 72, 65, 76, 76, 79, 87, 83, 32, 86, 50, 46, 48, 46, 48); // DEATHLY HALLOWS V2.0.0
 const int INTRO_LINE2[] = int[](66, 89, 32, 67, 65, 84, 72, 88, 82, 83, 89, 83); // BY CATHXRSYS
 
 const int   INTRO_WIDTH      = 87; // cells in the first line
