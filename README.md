@@ -2,7 +2,7 @@
 
 Лёгкий и очень атмосферный шейдер для Minecraft (Iris). Пасмурные дни, холодные синие ночи, светящиеся в темноте руды и тяжёлый дождь: мир, в котором не хочется оставаться под открытым небом, при этом без просадок FPS.
 
-**Версия 2.0.0**
+**Версия 2.0.1**
 
 ![Скриншот 1](images/image1.jpg)
 ![Скриншот 2](images/image2.jpg)
@@ -63,7 +63,7 @@
 
 ## Мод-дополнение
 
-В папке `mods/` лежит необязательный клиентский мод для Fabric (Minecraft 1.21.1), дополнение к шейдеру. Версия мода совпадает с версией шейдера: `deathlyhallows_2.0.0.jar` для шейдера V2.0.0.
+В папке `mods/` лежит необязательный клиентский мод для Fabric (Minecraft 1.21.1), дополнение к шейдеру. Версия мода совпадает с версией шейдера: `deathlyhallows_2.0.1.jar` для шейдера V2.0.1.
 
 - **Realistic Thunder**: гром слышен только когда звук дошел до игрока (скорость звука настраивается, по умолчанию 300 м/с), дальний гром тише и глуше.
 - **Distant Lightning**: во время грозы симулирует удары молний на расстоянии до 20 км: слабая вспышка у горизонта и запоздалый раскат.
@@ -83,7 +83,7 @@
 
 A lightweight, deeply atmospheric shader pack for Minecraft (Iris). Gloomy overcast days, cold blue nights, glowing ores in the dark and heavy rain: it is built to feel like a world you would rather not be caught outside in, without eating your framerate.
 
-**Version 2.0.0**
+**Version 2.0.1**
 
 ![Screenshot 1](images/image1.jpg)
 ![Screenshot 2](images/image2.jpg)
@@ -142,7 +142,7 @@ Iris is required. Dynamic held-item light, portal light and ore light rely on SS
 
 ## Companion mod
 
-The `mods/` folder holds an optional client-side Fabric mod (Minecraft 1.21.1), a companion to the shader pack. The mod version matches the shader version: `deathlyhallows_2.0.0.jar` goes with shader V2.0.0.
+The `mods/` folder holds an optional client-side Fabric mod (Minecraft 1.21.1), a companion to the shader pack. The mod version matches the shader version: `deathlyhallows_2.0.1.jar` goes with shader V2.0.1.
 
 - **Realistic Thunder**: thunder is heard only once its sound reaches the player (configurable speed of sound, 300 m/s by default); distant thunder is quieter and lower.
 - **Distant Lightning**: simulates strikes up to 20 km away during thunderstorms: a dim flash near the horizon and a delayed rumble.

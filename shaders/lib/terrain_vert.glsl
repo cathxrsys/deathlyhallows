@@ -123,6 +123,9 @@ void main() {
         float phase = worldPos.x * 0.35 + worldPos.z * 0.25;
         feet.x += swayWave(t, phase, blend) * amount;
         feet.z += swayWave(t * 0.8, phase * 1.3 + 1.5708, blend) * amount * 0.7;
+        // the shifted leaf faces are coplanar with the faces of neighbouring logs (z-fighting): inflate the cube slightly,
+        // so the leaf always lies above the log face instead of flickering through it
+        feet -= at_midBlock.xyz / 64.0 * (isLeaves * 0.04);
     }
 #endif
 

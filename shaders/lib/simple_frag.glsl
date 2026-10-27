@@ -71,7 +71,7 @@ void main() {
 #else
     float flick = getFlicker(worldPos, frameFlick);
 #endif
-    vec3 light = getLight(lmcoord, frameAmb, frameDay, flick) + heldLight(worldPos) + oreLightAt(worldPos);
+    vec3 light = getLight(lmcoord, frameAmb, frameDay, flick) + heldLight(worldPos, lmcoord.x, flick) + oreLightAt(worldPos);
 
 #ifdef IS_PARTICLE
     c.rgb = splash > 0.5 ? min(light, vec3(1.0)) * RAIN_BRIGHTNESS : c.rgb * light;

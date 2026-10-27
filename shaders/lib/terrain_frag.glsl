@@ -59,7 +59,7 @@ void main() {
     vec3 portalAdd = portalFrameLight(matId, lmcoord.x);
     if (matId != 10022) portalAdd += portalLight(worldPos, lmcoord.x);
     c.rgb += albedo * portalAdd * PORTAL_LIGHT_STRENGTH;
-    c.rgb += albedo * heldLight(worldPos);
+    c.rgb += albedo * heldLight(worldPos, lmcoord.x, flick);
     // colored ore light on the block itself and its neighbours
     c.rgb += albedo * oreLight(worldPos, worldNormal);
     // by day in lit places the glow is stronger, in the dark it stays weak

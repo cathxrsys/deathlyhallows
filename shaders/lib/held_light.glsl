@@ -42,3 +42,9 @@ vec3 heldLight(vec3 worldPos) {
     return vec3(0.0);
 #endif
 }
+
+// Held light does not add up with the block light of the surface (a torch on the wall): the stronger of the two wins,
+// held light only supplies what the block light lacks. Needs sky.glsl (getBlockLight).
+vec3 heldLight(vec3 worldPos, float blockLm, float flick) {
+    return max(heldLight(worldPos) - getBlockLight(blockLm, flick), vec3(0.0));
+}

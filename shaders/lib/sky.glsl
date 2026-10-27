@@ -307,9 +307,16 @@ float getFlicker(vec3 p, vec4 s) {
 #endif
 }
 
+// Block light (torches etc.) of a surface. Exponent 1.6 instead of 2: gentler falloff from the torch, less contrast
+// between the lit and the dark side of a wall; the peak is soft-clipped so the block next to the torch does not burn out
+vec3 getBlockLight(float bl, float flick) {
+    float b = pow(bl, 1.6) * 1.35;
+    return BLOCK_LIGHT * (b / (1.0 + 0.25 * b)) * flick;
+}
+
 // amb = getAmbient, day = getDay, flick = getFlicker
 vec3 getLight(vec2 lm, vec3 amb, float day, float flick) {
-    vec3 blockL = BLOCK_LIGHT * (lm.x * lm.x) * 1.4 * flick;
+    vec3 blockL = getBlockLight(lm.x, flick);
 
 #if defined(NETHER) || defined(END)
     return amb + blockL;
