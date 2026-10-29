@@ -40,6 +40,8 @@ FLICKER_STRENGTH=Intensidad del parpadeo
 FLICKER_STRENGTH.comment=Cuánto oscila el brillo. Mayor = parpadeo más fuerte y visible
 FLICKER_SPEED=Velocidad del parpadeo
 FLICKER_SPEED.comment=Qué tan rápido oscila la luz. Menor = respiración lenta y tranquila, mayor = parpadeo rápido y nervioso
+BLOCK_LIGHT_STRENGTH=Intensidad de luz de bloques
+BLOCK_LIGHT_STRENGTH.comment=Brillo de la luz de antorchas, faroles, fogatas y otros bloques luminosos colocados. Súbela si las cuevas se ven muy oscuras
 HELD_LIGHT=Luz de objetos
 HELD_LIGHT.comment=Antorchas, faroles, piedra luminosa y otros objetos brillantes iluminan su entorno: en tus manos, en manos de mobs, en el suelo y en marcos. Algo de coste en FPS: cada píxel comprueba las fuentes de luz cercanas
 HELD_LIGHT_STRENGTH=Intensidad de luz de objetos

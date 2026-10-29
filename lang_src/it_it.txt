@@ -40,6 +40,8 @@ FLICKER_STRENGTH=Intensità del tremolio
 FLICKER_STRENGTH.comment=Quanto oscilla la luminosità. Più alto = tremolio più forte e visibile
 FLICKER_SPEED=Velocità del tremolio
 FLICKER_SPEED.comment=Quanto velocemente oscilla la luce. Più basso = respiro lento e calmo, più alto = tremolio rapido e nervoso
+BLOCK_LIGHT_STRENGTH=Intensità luce dei blocchi
+BLOCK_LIGHT_STRENGTH.comment=Luminosità della luce di torce, lanterne, fuochi e altri blocchi luminosi posati. Aumentala se le caverne sono troppo buie
 HELD_LIGHT=Luce degli oggetti
 HELD_LIGHT.comment=Torce, lanterne, pietra luminosa e altri oggetti luminosi illuminano i dintorni: nelle tue mani, in quelle dei mob, a terra e nelle cornici. Costa un po' di FPS: ogni pixel controlla le fonti di luce vicine
 HELD_LIGHT_STRENGTH=Intensità luce degli oggetti

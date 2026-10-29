@@ -48,6 +48,14 @@ void main() {
     float splash = step(0.08, c.b - max(c.r, c.g)) * step(cn.r - cn.g, 0.1);
     splash = max(splash, step(0.08, glcolor.b - max(glcolor.r, glcolor.g)) * step(gn.r - gn.g, 0.1));
 
+    // real rain splashes only exist while it rains, under open sky, away from the player and not underwater;
+    // swimming drops, river splashes and blue block-break particles fail this and are drawn as ordinary particles
+    vec3 toEye = worldPos - eyePosition;
+    float realRain = step(0.01, rainStrength) * step(0.8, lmcoord.y) * step(2.5, length(toEye.xz)) * float(isEyeInWater == 0);
+    // blue particles that are not rain (swimming drops, river splashes): recolored to the river water below
+    float waterDrop = splash * (1.0 - realRain);
+    splash *= realRain;
+
     // the splash texture has binary alpha and the particle layer is drawn without blending,
     // so thinness is driven by the texture shade (light pixels are removed first),
     // and transparency by random pixel rejection
@@ -61,6 +69,11 @@ void main() {
         c.a = 1.0;
     } else if (c.a < 0.1) {
         discard;
+    }
+    if (waterDrop > 0.5) {
+        // same gray-brown as the river (WATER_COLOR), keeping the texture's light/dark pattern
+        float lum = dot(c.rgb, vec3(0.299, 0.587, 0.114));
+        c.rgb = WATER_COLOR * 3.0 * WATER_BRIGHTNESS * clamp(lum * 2.0, 0.5, 1.2);
     }
 #endif
 

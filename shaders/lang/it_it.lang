@@ -28,6 +28,8 @@ option.SKY_COOL.comment=Tinta blu fredda del cielo coperto e della nebbia. 0 = g
 
 screen.LIGHTS=Luce dinamica
 screen.LIGHTS.comment=Colore del nome = costo: \u00a7averde\u00a7r - gratis, \u00a7egiallo\u00a7r - un po' di FPS, \u00a7crosso\u00a7r - pesante
+option.BLOCK_LIGHT_STRENGTH=\u00a7aIntensit\u00e0 luce dei blocchi
+option.BLOCK_LIGHT_STRENGTH.comment=Luminosit\u00e0 della luce di torce, lanterne, fuochi e altri blocchi luminosi posati. Aumentala se le caverne sono troppo buie
 option.TORCH_FLICKER=\u00a7aTremolio del fuoco
 option.TORCH_FLICKER.comment=La luce di torce, fal\u00f2 e lava tremola dolcemente. Anche torce e lanterne in mano tremolano. Le lampade possono tremolare leggermente: lo shader non le distingue dal fuoco
 option.FLICKER_STRENGTH=\u00a7aIntensit\u00e0 del tremolio

@@ -28,6 +28,8 @@ option.SKY_COOL.comment=Tono azul fr\u00edo del cielo encapotado y la niebla. 0 
 
 screen.LIGHTS=Luz din\u00e1mica
 screen.LIGHTS.comment=Color del nombre = coste: \u00a7averde\u00a7r - gratis, \u00a7eamarillo\u00a7r - algo de FPS, \u00a7crojo\u00a7r - pesado
+option.BLOCK_LIGHT_STRENGTH=\u00a7aIntensidad de luz de bloques
+option.BLOCK_LIGHT_STRENGTH.comment=Brillo de la luz de antorchas, faroles, fogatas y otros bloques luminosos colocados. S\u00fabela si las cuevas se ven muy oscuras
 option.TORCH_FLICKER=\u00a7aParpadeo del fuego
 option.TORCH_FLICKER.comment=La luz de antorchas, fogatas y lava parpadea suavemente. Las antorchas y faroles en la mano tambi\u00e9n. Las l\u00e1mparas pueden parpadear un poco: el shader no las distingue del fuego
 option.FLICKER_STRENGTH=\u00a7aIntensidad del parpadeo

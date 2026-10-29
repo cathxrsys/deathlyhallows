@@ -28,6 +28,8 @@ option.SKY_COOL.comment=Kalter blauer Farbton des bedeckten Himmels und des Nebe
 
 screen.LIGHTS=Dynamisches Licht
 screen.LIGHTS.comment=Namensfarbe = Leistungskosten: \u00a7agr\u00fcn\u00a7r - kostenlos, \u00a7egelb\u00a7r - etwas FPS, \u00a7crot\u00a7r - schwer
+option.BLOCK_LIGHT_STRENGTH=\u00a7aBlocklicht-St\u00e4rke
+option.BLOCK_LIGHT_STRENGTH.comment=Helligkeit des Lichts platzierter Fackeln, Laternen, Feuer und anderer Lichtbl\u00f6cke. Erh\u00f6hen, wenn H\u00f6hlen zu dunkel wirken
 option.TORCH_FLICKER=\u00a7aFeuerflackern
 option.TORCH_FLICKER.comment=Das Licht von Fackeln, Lagerfeuern und Lava flackert sanft. Fackeln und Laternen in der Hand flackern ebenfalls. Lampen k\u00f6nnen leicht mitflackern: der Shader kann sie nicht von Feuer unterscheiden
 option.FLICKER_STRENGTH=\u00a7aFlackerst\u00e4rke

@@ -28,6 +28,8 @@ option.SKY_COOL.comment=Cold blue tint of the overcast sky and fog. 0 = neutral 
 
 screen.LIGHTS=Dynamic Light
 screen.LIGHTS.comment=Name color = performance cost: \u00a7agreen\u00a7r = free, \u00a7eyellow\u00a7r = small cost, \u00a7cred\u00a7r = heavy
+option.BLOCK_LIGHT_STRENGTH=\u00a7aBlock Light Strength
+option.BLOCK_LIGHT_STRENGTH.comment=Brightness of light from placed torches, lanterns, fires and other light blocks. Raise it if caves feel too dark
 option.TORCH_FLICKER=\u00a7aFire Flicker
 option.TORCH_FLICKER.comment=Light from torches, fires and lava gently flickers. Torches and lanterns held in hands flicker too. Lamps may flicker slightly as well, the shader cannot tell them apart
 option.FLICKER_STRENGTH=\u00a7aFlicker Strength

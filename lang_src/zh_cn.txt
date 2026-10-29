@@ -40,6 +40,8 @@ FLICKER_STRENGTH=闪烁强度
 FLICKER_STRENGTH.comment=亮度波动的幅度。越高 = 闪烁越强、越明显
 FLICKER_SPEED=闪烁速度
 FLICKER_SPEED.comment=光线波动的速度。越低 = 平静缓慢的呼吸感，越高 = 急促快速的闪烁
+BLOCK_LIGHT_STRENGTH=方块光照强度
+BLOCK_LIGHT_STRENGTH.comment=已放置的火把、灯笼、火堆等发光方块的光照亮度。洞穴太暗时可调高
 HELD_LIGHT=物品光源
 HELD_LIGHT.comment=火把、灯笼、萤石等发光物品会照亮周围：在你手中、在其他生物手中、掉落在地上以及在物品展示框中。少量 FPS 开销：每个像素都要检查附近的光源
 HELD_LIGHT_STRENGTH=物品光源强度

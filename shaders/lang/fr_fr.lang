@@ -28,6 +28,8 @@ option.SKY_COOL.comment=Teinte bleue froide du ciel couvert et du brouillard. 0 
 
 screen.LIGHTS=Lumi\u00e8re dynamique
 screen.LIGHTS.comment=Couleur du nom = co\u00fbt : \u00a7avert\u00a7r - gratuit, \u00a7ejaune\u00a7r - un peu de FPS, \u00a7crouge\u00a7r - lourd
+option.BLOCK_LIGHT_STRENGTH=\u00a7aForce de la lumi\u00e8re des blocs
+option.BLOCK_LIGHT_STRENGTH.comment=Luminosit\u00e9 de la lumi\u00e8re des torches, lanternes, feux et autres blocs lumineux pos\u00e9s. Augmentez si les grottes sont trop sombres
 option.TORCH_FLICKER=\u00a7aVacillement du feu
 option.TORCH_FLICKER.comment=La lumi\u00e8re des torches, feux de camp et lave vacille doucement. Les torches et lanternes en main aussi. Les lampes peuvent vaciller l\u00e9g\u00e8rement : le shader ne les distingue pas du feu
 option.FLICKER_STRENGTH=\u00a7aForce du vacillement

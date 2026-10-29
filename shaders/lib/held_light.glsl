@@ -37,7 +37,7 @@ vec3 heldLight(vec3 worldPos) {
         // soft falloff (closer to linear)
         sum = max(sum, heldBuf.latCol[i].rgb * (a * (0.4 + 0.6 * a) * near));
     }
-    return sum * HELD_LIGHT_STRENGTH;
+    return sum * HELD_LIGHT_STRENGTH * BLOCK_LIGHT_STRENGTH; // scales with placed torches so the held one is not weaker
 #else
     return vec3(0.0);
 #endif

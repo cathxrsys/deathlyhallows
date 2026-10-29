@@ -40,6 +40,8 @@ FLICKER_STRENGTH=Force du vacillement
 FLICKER_STRENGTH.comment=Amplitude des variations de luminosité. Plus haut = vacillement plus fort et visible
 FLICKER_SPEED=Vitesse du vacillement
 FLICKER_SPEED.comment=Rapidité des variations de lumière. Plus bas = respiration lente et calme, plus haut = vacillement rapide et nerveux
+BLOCK_LIGHT_STRENGTH=Force de la lumière des blocs
+BLOCK_LIGHT_STRENGTH.comment=Luminosité de la lumière des torches, lanternes, feux et autres blocs lumineux posés. Augmentez si les grottes sont trop sombres
 HELD_LIGHT=Lumière des objets
 HELD_LIGHT.comment=Torches, lanternes, pierre lumineuse et autres objets lumineux éclairent leurs alentours : dans vos mains, dans celles des mobs, au sol et dans les cadres. Léger coût en FPS : chaque pixel vérifie les sources de lumière proches
 HELD_LIGHT_STRENGTH=Force de la lumière des objets

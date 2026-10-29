@@ -40,6 +40,8 @@ FLICKER_STRENGTH=Flackerstärke
 FLICKER_STRENGTH.comment=Wie stark die Helligkeit schwankt. Höher = stärkeres, auffälligeres Flackern
 FLICKER_SPEED=Flackergeschwindigkeit
 FLICKER_SPEED.comment=Wie schnell das Licht schwankt. Niedriger = ruhiges langsames Atmen, höher = nervöses schnelles Flackern
+BLOCK_LIGHT_STRENGTH=Blocklicht-Stärke
+BLOCK_LIGHT_STRENGTH.comment=Helligkeit des Lichts platzierter Fackeln, Laternen, Feuer und anderer Lichtblöcke. Erhöhen, wenn Höhlen zu dunkel wirken
 HELD_LIGHT=Licht von Gegenständen
 HELD_LIGHT.comment=Fackeln, Laternen, Leuchtstein und andere leuchtende Gegenstände erhellen ihre Umgebung: in deiner Hand, in den Händen von Mobs, auf dem Boden und in Rahmen. Kostet etwas FPS: jeder Pixel prüft die nahen Lichtquellen
 HELD_LIGHT_STRENGTH=Stärke des Gegenstandslichts

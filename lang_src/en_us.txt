@@ -40,6 +40,8 @@ FLICKER_STRENGTH=Flicker Strength
 FLICKER_STRENGTH.comment=How much the brightness wavers. Higher = stronger, more noticeable flicker
 FLICKER_SPEED=Flicker Speed
 FLICKER_SPEED.comment=How fast the light wavers. Lower = calm slow breathing, higher = nervous fast flicker
+BLOCK_LIGHT_STRENGTH=Block Light Strength
+BLOCK_LIGHT_STRENGTH.comment=Brightness of light from placed torches, lanterns, fires and other light blocks. Raise it if caves feel too dark
 HELD_LIGHT=Held Item Light
 HELD_LIGHT.comment=Torches, lanterns, glowstone and other glowing items light up the area around them: in your hands, in other mobs' hands, dropped on the ground and in item frames. Small FPS cost: every pixel checks the nearby light sources
 HELD_LIGHT_STRENGTH=Held Light Strength
