@@ -2,7 +2,7 @@
 
 Лёгкий и очень атмосферный шейдер для Minecraft (Iris). Пасмурные дни, холодные синие ночи, светящиеся в темноте руды и тяжёлый дождь: мир, в котором не хочется оставаться под открытым небом, при этом без просадок FPS.
 
-**Версия 2.0.4**
+**Версия 2.1.0**
 
 ![Скриншот 1](images/image1.jpg)
 ![Скриншот 2](images/image2.jpg)
@@ -63,7 +63,7 @@
 
 ## Мод-дополнение
 
-В папке `mods/` лежит необязательный клиентский мод для Fabric (Minecraft 1.21.1), дополнение к шейдеру. Версия мода совпадает с версией шейдера: `deathlyhallows_2.0.4.jar` для шейдера V2.0.4.
+В папке `mods/` лежит необязательный клиентский мод для Fabric (Minecraft 1.21.1), дополнение к шейдеру. Версия мода совпадает с версией шейдера: `deathlyhallows_2.1.0.jar` для шейдера V2.1.0.
 
 - **Realistic Thunder**: гром слышен только когда звук дошел до игрока (скорость звука настраивается, по умолчанию 300 м/с), дальний гром тише и глуше.
 - **Distant Lightning**: во время грозы симулирует удары молний на расстоянии до 20 км: слабая вспышка у горизонта и запоздалый раскат.
@@ -71,6 +71,9 @@
 - **Custom Weather**: частота дождя и гроз настраивается: никогда, редко, по умолчанию, часто, постоянно. В одиночной игре подменяется погодный цикл встроенного сервера, так что погода настоящая (мобы, посевы, молнии), команды `/weather` продолжают работать. На чужих серверах погода симулируется на клиенте: дождь, небо, звуки и шейдер следуют своему циклу, а при частых грозах молнии бьют и рядом (от 100 м). Гроза без дождя невозможна: при дожде «никогда» гроз тоже нет, а частые грозы приносят дождь с собой.
 
 - **Smaller Shield**: щит в левой руке уменьшается (50-90%, по умолчанию 80%), пока вы не блокируете им, и плавно возвращается к полному размеру при блоке.
+
+- **Campfire Cooking**: еда на костре постепенно превращается из сырой в готовую (текстура сырого предмета плавно перетекает в готовую). Прогресс считается на клиенте: еда, которая уже готовилась, когда вы подошли, начнет с нуля.
+- **Mob Health Bars** (по умолчанию выключено): красная полоска здоровья над мобом, которого вы ранили (в ближнем бою или снарядом), пока вы рядом (8-32 блока). Недавно потерянное здоровье светлым хвостом сжимается к текущему.
 
 Настройки открываются через [Mod Menu](https://modrinth.com/mod/modmenu). Сборка: `mods/build.sh` (jar в `mods/build/`), установка в `~/.minecraft/mods`: `mods/install.sh`.
 
@@ -87,7 +90,7 @@
 
 A lightweight, deeply atmospheric shader pack for Minecraft (Iris). Gloomy overcast days, cold blue nights, glowing ores in the dark and heavy rain: it is built to feel like a world you would rather not be caught outside in, without eating your framerate.
 
-**Version 2.0.4**
+**Version 2.1.0**
 
 ![Screenshot 1](images/image1.jpg)
 ![Screenshot 2](images/image2.jpg)
@@ -146,10 +149,12 @@ Iris is required. Dynamic held-item light, portal light and ore light rely on SS
 
 ## Companion mod
 
-The `mods/` folder holds an optional client-side Fabric mod (Minecraft 1.21.1), a companion to the shader pack. The mod version matches the shader version: `deathlyhallows_2.0.4.jar` goes with shader V2.0.4.
+The `mods/` folder holds an optional client-side Fabric mod (Minecraft 1.21.1), a companion to the shader pack. The mod version matches the shader version: `deathlyhallows_2.1.0.jar` goes with shader V2.1.0.
 
 - **Realistic Thunder**: thunder is heard only once its sound reaches the player (configurable speed of sound, 300 m/s by default); distant thunder is quieter and lower.
 - **Distant Lightning**: simulates strikes up to 20 km away during thunderstorms: a dim flash near the horizon and a delayed rumble.
+- **Campfire Cooking**: food on a campfire gradually turns from raw into cooked (the texture of the raw item gradually turns into the cooked one). Progress is tracked on the client, so food that was already cooking when you walked up starts from zero.
+- **Mob Health Bars** (off by default): a red health bar over a mob you hurt (melee or projectile) while you are near it (8-32 blocks). Recently lost health shows as a pale trail shrinking to the current value.
 
 Settings open through [Mod Menu](https://modrinth.com/mod/modmenu). Build with `mods/build.sh` (jar goes to `mods/build/`), install into `~/.minecraft/mods` with `mods/install.sh`.
 

@@ -16,6 +16,8 @@ public class ConfigScreen extends Screen {
     private StepSlider speedSlider;
     private StepSlider rangeSlider;
     private StepSlider shieldSlider;
+    private StepSlider barRangeSlider;
+    private StepSlider barOpacitySlider;
     private CycleButton<WeatherFrequency> thunderButton;
 
     public ConfigScreen(Screen parent) {
@@ -85,6 +87,30 @@ public class ConfigScreen extends Screen {
                 Config.SHIELD_SCALES, Config.shieldScale, 3, v -> Config.shieldScale = v,
                 "Size of the idle shield in percent of the normal one."));
         shieldSlider.active = Config.smallShield;
+
+        addRenderableWidget(CycleButton.onOffBuilder(Config.campfireCooking)
+                .withTooltip(v -> Tooltip.create(Component.literal(
+                        "Food on a campfire gradually turns from raw into cooked while it cooks.")))
+                .create(x, y + 112, w, 20, Component.literal("Campfire Cooking"), (b, v) -> Config.campfireCooking = v));
+
+        addRenderableWidget(CycleButton.onOffBuilder(Config.mobHealthBars)
+                .withTooltip(v -> Tooltip.create(Component.literal(
+                        "A red health bar over a mob that you have hurt, so you can see how much damage you deal.")))
+                .create(rx, y + 112, w, 20, Component.literal("Mob Health Bars"), (b, v) -> {
+                    Config.mobHealthBars = v;
+                    barRangeSlider.active = v;
+                    barOpacitySlider.active = v;
+                }));
+
+        barRangeSlider = addRenderableWidget(new StepSlider(rx, y + 136, w, "Bar Distance", "blocks",
+                Config.BAR_RANGES, Config.healthBarRange, 2, v -> Config.healthBarRange = v,
+                "How close you must be to a mob to see its health bar."));
+        barRangeSlider.active = Config.mobHealthBars;
+
+        barOpacitySlider = addRenderableWidget(new StepSlider(x, y + 136, w, "Bar Opacity", "%",
+                Config.BAR_OPACITIES, Config.healthBarOpacity, 4, v -> Config.healthBarOpacity = v,
+                "How opaque the mob health bars are."));
+        barOpacitySlider.active = Config.mobHealthBars;
 
         addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, b -> onClose())
                 .bounds(width / 2 - 100, height - 28, 200, 20)
