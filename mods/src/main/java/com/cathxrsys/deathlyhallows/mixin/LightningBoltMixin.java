@@ -1,5 +1,6 @@
 package com.cathxrsys.deathlyhallows.mixin;
 
+import com.cathxrsys.deathlyhallows.CustomWeather;
 import com.cathxrsys.deathlyhallows.DistantLightningBolt;
 import com.cathxrsys.deathlyhallows.RealisticThunder;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
@@ -10,9 +11,21 @@ import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LightningBolt.class)
 public abstract class LightningBoltMixin {
+    // with simulated weather the server's strikes belong to a different sky: drop them
+    @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
+    private void deathlyhallows$dropServerBolt(CallbackInfo ci) {
+        LightningBolt bolt = (LightningBolt) (Object) this;
+        if (bolt.level().isClientSide() && !(bolt instanceof DistantLightningBolt) && CustomWeather.replacesServerBolts()) {
+            bolt.discard();
+            ci.cancel();
+        }
+    }
+
     // vanilla plays thunder and impact instantly on the client; delay both by distance / speed of sound
     @WrapOperation(method = "tick", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/world/level/Level;playLocalSound(DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFZ)V"))

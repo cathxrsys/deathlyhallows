@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "com.cathxrsys.deathlyhallows.mixin",
   "compatibilityLevel": "JAVA_21",
-  "client": ["ClientLevelMixin", "LightningBoltMixin"],
+  "client": ["ClientLevelMixin", "ItemInHandRendererMixin", "LevelMixin", "LightningBoltMixin", "ServerLevelMixin"],
   "injectors": {
     "defaultRequire": 1
   }

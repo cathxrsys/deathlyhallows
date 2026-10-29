@@ -14,11 +14,17 @@ public final class Config {
     public static final int[] SOUND_SPEEDS = {150, 300, 600, 1200, 2400};
     // selectable max distances of simulated strikes, km
     public static final int[] LIGHTNING_RANGES = {2, 5, 10, 20};
+    // selectable sizes of an idle shield in the left hand, percent
+    public static final int[] SHIELD_SCALES = {50, 60, 70, 80, 90};
 
     public static boolean realisticThunder = true;
     public static int soundSpeed = 300;
     public static boolean distantLightning = true;
     public static int lightningRange = 20;
+    public static boolean smallShield = true;
+    public static int shieldScale = 80;
+    public static WeatherFrequency rainFrequency = WeatherFrequency.DEFAULT;
+    public static WeatherFrequency thunderFrequency = WeatherFrequency.DEFAULT;
 
     private static final Path FILE = FabricLoader.getInstance().getConfigDir().resolve("deathlyhallows.properties");
 
@@ -43,6 +49,10 @@ public final class Config {
         soundSpeed = SOUND_SPEEDS[indexOf(SOUND_SPEEDS, parseInt(p.getProperty("soundSpeed")), 1)];
         distantLightning = Boolean.parseBoolean(p.getProperty("distantLightning", "true"));
         lightningRange = LIGHTNING_RANGES[indexOf(LIGHTNING_RANGES, parseInt(p.getProperty("lightningRange")), 3)];
+        smallShield = Boolean.parseBoolean(p.getProperty("smallShield", "true"));
+        shieldScale = SHIELD_SCALES[indexOf(SHIELD_SCALES, parseInt(p.getProperty("shieldScale")), 3)];
+        rainFrequency = WeatherFrequency.parse(p.getProperty("rainFrequency"));
+        thunderFrequency = WeatherFrequency.parse(p.getProperty("thunderFrequency"));
     }
 
     public static void save() {
@@ -51,6 +61,10 @@ public final class Config {
         p.setProperty("soundSpeed", Integer.toString(soundSpeed));
         p.setProperty("distantLightning", Boolean.toString(distantLightning));
         p.setProperty("lightningRange", Integer.toString(lightningRange));
+        p.setProperty("smallShield", Boolean.toString(smallShield));
+        p.setProperty("shieldScale", Integer.toString(shieldScale));
+        p.setProperty("rainFrequency", rainFrequency.name());
+        p.setProperty("thunderFrequency", thunderFrequency.name());
         try {
             Files.createDirectories(FILE.getParent());
             try (Writer w = Files.newBufferedWriter(FILE)) {
