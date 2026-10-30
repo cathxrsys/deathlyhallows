@@ -19,7 +19,9 @@ import net.minecraft.world.phys.AABB;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Realistic sleep on the integrated server (singleplayer or a LAN world).
@@ -57,6 +59,8 @@ public final class RealisticSleep {
     private static final float LURE_INTERVAL = 40.0f;
     private static final float LURE_CHANCE = 0.35f;
     private static final int LURE_PATHS = 4;
+    // a monster after a sleeper is checked this often (in ticks) for a way to the bed
+    private static final int REACH_RECHECK = 20;
 
     // shared with the client thread
     private static volatile boolean timelapse;
@@ -77,6 +81,9 @@ public final class RealisticSleep {
     private static int extraTicks;
 
     private static float clientDebt;
+
+    private record Reach(boolean reaches, long until) {}
+    private static final Map<Monster, Reach> reach = new HashMap<>();
 
     private RealisticSleep() {}
 
@@ -216,6 +223,7 @@ public final class RealisticSleep {
         lastPush = 0;
         warpDebt = 0.0f;
         warp = 1.0f;
+        reach.clear();
     }
 
     private static void stop(ServerLevel level) {
@@ -223,6 +231,7 @@ public final class RealisticSleep {
         timelapse = false;
         warp = 1.0f;
         extraTicks = 0;
+        reach.clear();
         ServerTickRateManager rate = level.getServer().tickRateManager();
         if (rate.tickrate() != normalRate) rate.setTickRate(normalRate);
     }
@@ -279,16 +288,29 @@ public final class RealisticSleep {
         return false;
     }
 
-    // squared distance of the closest monster on its way to the sleeper that can get there, MAX_VALUE if none
+    // squared distance of the closest monster on its way to the sleeper that can get there, MAX_VALUE if none.
+    // A monster that saw the sleeper through a window or stands at a closed door is no danger, the night goes on
     private static double hunted(ServerLevel level, ServerPlayer sleeper) {
         double closest = Double.MAX_VALUE;
         for (Monster monster : level.getEntitiesOfClass(Monster.class, around(sleeper, DANGER_RADIUS), Entity::isAlive)) {
             if (monster.getTarget() != sleeper) continue;
             double d = monster.distanceToSqr(sleeper);
-            Path path = monster.getNavigation().getPath();
-            if (d < 9.0 || path != null && path.canReach()) closest = Math.min(closest, d);
+            if (d < closest && reaches(level, monster, sleeper)) closest = d;
         }
+        reach.keySet().removeIf(m -> m.isRemoved() || m.getTarget() == null);
         return closest;
+    }
+
+    // whether the monster can walk up to the bed, by its own pathfinder: a closed door stops it,
+    // unless it is a zombie that breaks doors (hard difficulty)
+    private static boolean reaches(ServerLevel level, Monster monster, ServerPlayer sleeper) {
+        long now = level.getGameTime();
+        Reach known = reach.get(monster);
+        if (known != null && now < known.until()) return known.reaches();
+        Path path = monster.getNavigation().createPath(sleeper, 1);
+        boolean reaches = path != null && path.canReach();
+        reach.put(monster, new Reach(reaches, now + REACH_RECHECK));
+        return reaches;
     }
 
     // monsters nearby may hear a sleeper; they come only if they can walk up to the bed (an open door, a hole in the wall)
@@ -301,8 +323,7 @@ public final class RealisticSleep {
             if (tries >= LURE_PATHS) break;
             if (level.getRandom().nextFloat() >= LURE_CHANCE) continue;
             tries++;
-            Path path = monster.getNavigation().createPath(sleeper, 1);
-            if (path != null && path.canReach()) monster.setTarget(sleeper);
+            if (reaches(level, monster, sleeper)) monster.setTarget(sleeper);
         }
     }
 
