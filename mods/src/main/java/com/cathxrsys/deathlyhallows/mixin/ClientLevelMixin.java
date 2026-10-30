@@ -1,6 +1,7 @@
 package com.cathxrsys.deathlyhallows.mixin;
 
 import com.cathxrsys.deathlyhallows.CustomWeather;
+import com.cathxrsys.deathlyhallows.CropMarkers;
 import com.cathxrsys.deathlyhallows.DistantLightning;
 import com.cathxrsys.deathlyhallows.MobHealthBars;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -17,6 +18,7 @@ public abstract class ClientLevelMixin {
     private void deathlyhallows$tick(BooleanSupplier hasTimeLeft, CallbackInfo ci) {
         CustomWeather.tickClient((ClientLevel) (Object) this);
         DistantLightning.tick((ClientLevel) (Object) this);
+        CropMarkers.tick((ClientLevel) (Object) this);
         MobHealthBars.tick((ClientLevel) (Object) this);
     }
 }

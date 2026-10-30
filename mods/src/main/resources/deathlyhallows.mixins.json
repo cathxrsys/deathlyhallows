@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "com.cathxrsys.deathlyhallows.mixin",
   "compatibilityLevel": "JAVA_21",
-  "client": ["CampfireRendererMixin", "ClientLevelMixin", "ItemInHandRendererMixin", "LevelMixin", "LightningBoltMixin", "LivingEntityMixin", "LivingEntityRendererMixin", "ServerLevelMixin"],
+  "client": ["CampfireRendererMixin", "ClientLevelMixin", "ItemInHandRendererMixin", "LevelMixin", "LevelRendererMixin", "LightningBoltMixin", "LivingEntityMixin", "LivingEntityRendererMixin", "ServerLevelMixin"],
   "injectors": {
     "defaultRequire": 1
   }

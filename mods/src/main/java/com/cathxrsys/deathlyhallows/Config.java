@@ -18,8 +18,10 @@ public final class Config {
     public static final int[] SHIELD_SCALES = {50, 60, 70, 80, 90};
     // selectable distances up to which health bars are shown, blocks
     public static final int[] BAR_RANGES = {8, 16, 24, 32};
-    // selectable opacities of health bars, percent
-    public static final int[] BAR_OPACITIES = {20, 40, 60, 80, 100};
+    // selectable opacities of health bars and crop markers, percent
+    public static final int[] OPACITIES = {20, 30, 40, 50, 60, 70, 80, 90, 100};
+    // selectable sizes of crop markers, percent
+    public static final int[] MARKER_SIZES = {50, 75, 100, 125, 150, 200};
 
     public static boolean realisticThunder = true;
     public static int soundSpeed = 300;
@@ -31,6 +33,9 @@ public final class Config {
     public static boolean mobHealthBars = false;
     public static int healthBarRange = 24;
     public static int healthBarOpacity = 100;
+    public static boolean cropMarkers = true;
+    public static int cropMarkerOpacity = 50;
+    public static int cropMarkerSize = 100;
     public static WeatherFrequency rainFrequency = WeatherFrequency.DEFAULT;
     public static WeatherFrequency thunderFrequency = WeatherFrequency.DEFAULT;
 
@@ -62,7 +67,10 @@ public final class Config {
         campfireCooking = Boolean.parseBoolean(p.getProperty("campfireCooking", "true"));
         mobHealthBars = Boolean.parseBoolean(p.getProperty("mobHealthBars", "false"));
         healthBarRange = BAR_RANGES[indexOf(BAR_RANGES, parseInt(p.getProperty("healthBarRange")), 2)];
-        healthBarOpacity = BAR_OPACITIES[indexOf(BAR_OPACITIES, parseInt(p.getProperty("healthBarOpacity")), 4)];
+        healthBarOpacity = OPACITIES[indexOf(OPACITIES, parseInt(p.getProperty("healthBarOpacity")), 8)];
+        cropMarkers = Boolean.parseBoolean(p.getProperty("cropMarkers", "true"));
+        cropMarkerOpacity = OPACITIES[indexOf(OPACITIES, parseInt(p.getProperty("cropMarkerOpacity")), 3)];
+        cropMarkerSize = MARKER_SIZES[indexOf(MARKER_SIZES, parseInt(p.getProperty("cropMarkerSize")), 2)];
         rainFrequency = WeatherFrequency.parse(p.getProperty("rainFrequency"));
         thunderFrequency = WeatherFrequency.parse(p.getProperty("thunderFrequency"));
     }
@@ -79,6 +87,9 @@ public final class Config {
         p.setProperty("mobHealthBars", Boolean.toString(mobHealthBars));
         p.setProperty("healthBarRange", Integer.toString(healthBarRange));
         p.setProperty("healthBarOpacity", Integer.toString(healthBarOpacity));
+        p.setProperty("cropMarkers", Boolean.toString(cropMarkers));
+        p.setProperty("cropMarkerOpacity", Integer.toString(cropMarkerOpacity));
+        p.setProperty("cropMarkerSize", Integer.toString(cropMarkerSize));
         p.setProperty("rainFrequency", rainFrequency.name());
         p.setProperty("thunderFrequency", thunderFrequency.name());
         try {

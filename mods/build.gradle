@@ -2,7 +2,7 @@ plugins {
     id 'fabric-loom' version "${loom_version}"
 }
 
-// build.sh passes the shader pack version (-Pmod_version=2.1.0)
+// build.sh passes the shader pack version (-Pmod_version=2.2.0)
 version = project.findProperty('mod_version') ?: 'dev'
 group = 'com.cathxrsys'
 

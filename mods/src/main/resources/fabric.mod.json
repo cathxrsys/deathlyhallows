@@ -6,6 +6,7 @@
   "description": "Companion mod for the Deathly Hallows shader pack.",
   "authors": ["cathxrsys"],
   "license": "MIT",
+  "icon": "assets/deathlyhallows/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": ["com.cathxrsys.deathlyhallows.DeathlyHallowsClient"],

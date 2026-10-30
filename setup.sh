@@ -1,6 +1,6 @@
 #!/bin/sh
 # Builds the shader pack zip into the Minecraft shaderpacks folder.
-# The version is taken from the INTRO_LINE1 comment in lib/intro.glsl ("V2.1.0").
+# The version is taken from the INTRO_LINE1 comment in lib/intro.glsl ("V2.2.0").
 cd "$(dirname "$0")"
 VER=$(grep -m1 'INTRO_LINE1' shaders/lib/intro.glsl | grep -oE 'V[0-9]+(\.[0-9]+)+' | tr -d V)
 [ -z "$VER" ] && { echo 'version not found in intro.glsl'; exit 1; }
