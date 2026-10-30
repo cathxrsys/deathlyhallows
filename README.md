@@ -2,7 +2,7 @@
 
 Лёгкий и очень атмосферный шейдер для Minecraft (Iris). Пасмурные дни, холодные синие ночи, светящиеся в темноте руды и тяжёлый дождь: мир, в котором не хочется оставаться под открытым небом, при этом без просадок FPS.
 
-**Версия 2.2.0**
+**Версия 2.3.0**
 
 ![Скриншот 1](images/image1.jpg)
 ![Скриншот 2](images/image2.jpg)
@@ -63,7 +63,7 @@
 
 ## Мод-дополнение
 
-В папке `mods/` лежит необязательный клиентский мод для Fabric (Minecraft 1.21.1), дополнение к шейдеру. Версия мода совпадает с версией шейдера: `deathlyhallows_2.2.0.jar` для шейдера V2.2.0.
+В папке `mods/` лежит необязательный клиентский мод для Fabric (Minecraft 1.21.1), дополнение к шейдеру. Версия мода совпадает с версией шейдера: `deathlyhallows_2.3.0.jar` для шейдера V2.3.0.
 
 - **Realistic Thunder**: гром слышен только когда звук дошел до игрока (скорость звука настраивается, по умолчанию 300 м/с), дальний гром тише и глуше.
 - **Distant Lightning**: во время грозы симулирует удары молний на расстоянии до 20 км: слабая вспышка у горизонта и запоздалый раскат.
@@ -75,6 +75,7 @@
 - **Campfire Cooking**: еда на костре постепенно превращается из сырой в готовую (текстура сырого предмета плавно перетекает в готовую). Прогресс считается на клиенте: еда, которая уже готовилась, когда вы подошли, начнет с нуля.
 - **Mob Health Bars** (по умолчанию выключено): красная полоска здоровья над мобом, которого вы ранили (в ближнем бою или снарядом), пока вы рядом (8-32 блока). Недавно потерянное здоровье светлым хвостом сжимается к текущему.
 - **Crop Markers**: зеленая галочка над полностью выросшей пшеницей, морковью, картошкой и свеклой в радиусе 16 блоков. Пропадает, как только урожай сломан. Размер (50-200%) и непрозрачность (по умолчанию 50%) настраиваются.
+- **Realistic Sleep** (только одиночная игра и LAN): ночь не пропускается, а проходит ускоренно, пока вы спите (вся ночь за 10-60 секунд, по умолчанию 20; если компьютер не тянет столько тиков, время суток, рост растений и печи ускоряются сверх тикрейта). Растут посевы и тростник, работают печи, живут мобы. Просыпаетесь на рассвете, как в ванили. **Sleep Camera**: камера уходит из кровати на улицу (перелетает, если путь свободен, иначе через затемнение) и показывает, как ночь сменяется днем; если открытого неба рядом нет, остается в кровати. **Night Dangers** (по умолчанию выключено): монстр, который может дойти до кровати (открытая дверь, дыра в стене), может найти вас во сне и разбудить ударом, а зашипевший рядом крипер будит сразу. Когда кто-то идет к спящему, ночь замедляется до обычной скорости. Без этой опции монстры спящих не трогают.
 
 Настройки открываются через [Mod Menu](https://modrinth.com/mod/modmenu). Сборка: `mods/build.sh` (jar в `mods/build/`), установка в `~/.minecraft/mods`: `mods/install.sh`.
 
@@ -91,7 +92,7 @@
 
 A lightweight, deeply atmospheric shader pack for Minecraft (Iris). Gloomy overcast days, cold blue nights, glowing ores in the dark and heavy rain: it is built to feel like a world you would rather not be caught outside in, without eating your framerate.
 
-**Version 2.2.0**
+**Version 2.3.0**
 
 ![Screenshot 1](images/image1.jpg)
 ![Screenshot 2](images/image2.jpg)
@@ -150,13 +151,14 @@ Iris is required. Dynamic held-item light, portal light and ore light rely on SS
 
 ## Companion mod
 
-The `mods/` folder holds an optional client-side Fabric mod (Minecraft 1.21.1), a companion to the shader pack. The mod version matches the shader version: `deathlyhallows_2.2.0.jar` goes with shader V2.2.0.
+The `mods/` folder holds an optional client-side Fabric mod (Minecraft 1.21.1), a companion to the shader pack. The mod version matches the shader version: `deathlyhallows_2.3.0.jar` goes with shader V2.3.0.
 
 - **Realistic Thunder**: thunder is heard only once its sound reaches the player (configurable speed of sound, 300 m/s by default); distant thunder is quieter and lower.
 - **Distant Lightning**: simulates strikes up to 20 km away during thunderstorms: a dim flash near the horizon and a delayed rumble.
 - **Campfire Cooking**: food on a campfire gradually turns from raw into cooked (the texture of the raw item gradually turns into the cooked one). Progress is tracked on the client, so food that was already cooking when you walked up starts from zero.
 - **Mob Health Bars** (off by default): a red health bar over a mob you hurt (melee or projectile) while you are near it (8-32 blocks). Recently lost health shows as a pale trail shrinking to the current value.
 - **Crop Markers**: a green check mark over fully grown wheat, carrots, potatoes and beetroots within 16 blocks. It disappears as soon as the crop is broken. Size (50-200%) and opacity (50% by default) are configurable.
+- **Realistic Sleep** (singleplayer and LAN only): the night is not skipped but passes fast while you sleep (a whole night in 10-60 seconds, 20 by default; when the computer cannot run that many ticks, the time of day, crop growth and furnaces are sped up beyond the tick rate). Crops and sugar cane grow, furnaces smelt, mobs live on. You wake at dawn, like in vanilla. **Sleep Camera**: the camera leaves the bed for a spot outside (it flies there when the way is clear, otherwise it dips to black) and shows the night turning into day; with no open sky nearby it stays in bed. **Night Dangers** (off by default): a monster that can walk up to your bed (an open door, a hole in the wall) may find you in your sleep and wake you with a hit, and a creeper that starts hissing next to you wakes you at once. While something is coming for a sleeper the night slows down to normal speed. With the option off monsters leave sleepers alone.
 
 Settings open through [Mod Menu](https://modrinth.com/mod/modmenu). Build with `mods/build.sh` (jar goes to `mods/build/`), install into `~/.minecraft/mods` with `mods/install.sh`.
 

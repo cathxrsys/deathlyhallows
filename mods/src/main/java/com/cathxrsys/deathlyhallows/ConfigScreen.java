@@ -26,7 +26,10 @@ public class ConfigScreen extends Screen {
     private StepSlider barOpacitySlider;
     private StepSlider cropOpacitySlider;
     private StepSlider cropSizeSlider;
+    private StepSlider nightSlider;
     private CycleButton<WeatherFrequency> thunderButton;
+    private CycleButton<Boolean> sleepCameraButton;
+    private CycleButton<Boolean> dangersButton;
 
     // group titles drawn above their widgets: x, y, text
     private final List<Object[]> headers = new ArrayList<>();
@@ -116,37 +119,37 @@ public class ConfigScreen extends Screen {
         thunderButton.active = Config.rainFrequency != WeatherFrequency.NEVER;
         endGroup(1);
 
-        group(1, "Crop Markers");
+        group(0, "Shield");
+        addRenderableWidget(CycleButton.onOffBuilder(Config.smallShield)
+                .withTooltip(v -> Tooltip.create(Component.literal(
+                        "Draws a shield in the left hand smaller while you are not blocking, so it does not cover the screen.")))
+                .create(colX[0], row(0), w, 20, Component.literal("Smaller Shield"), (b, v) -> {
+                    Config.smallShield = v;
+                    shieldSlider.active = v;
+                }));
+        shieldSlider = addRenderableWidget(new StepSlider(colX[0], row(0), w, "Size", "%",
+                Config.SHIELD_SCALES, Config.shieldScale, 3, v -> Config.shieldScale = v,
+                "Size of the idle shield in percent of the normal one."));
+        shieldSlider.active = Config.smallShield;
+        endGroup(0);
+
+        group(2, "Crop Markers");
         addRenderableWidget(CycleButton.onOffBuilder(Config.cropMarkers)
                 .withTooltip(v -> Tooltip.create(Component.literal(
                         "A green check mark over fully grown crops (wheat, carrots, potatoes, beetroots) near you.")))
-                .create(colX[1], row(1), w, 20, Component.literal("Crop Markers"), (b, v) -> {
+                .create(colX[2], row(2), w, 20, Component.literal("Crop Markers"), (b, v) -> {
                     Config.cropMarkers = v;
                     cropOpacitySlider.active = v;
                     cropSizeSlider.active = v;
                 }));
-        cropOpacitySlider = addRenderableWidget(new StepSlider(colX[1], row(1), w, "Opacity", "%",
+        cropOpacitySlider = addRenderableWidget(new StepSlider(colX[2], row(2), w, "Opacity", "%",
                 Config.OPACITIES, Config.cropMarkerOpacity, 3, v -> Config.cropMarkerOpacity = v,
                 "How opaque the check marks are."));
-        cropSizeSlider = addRenderableWidget(new StepSlider(colX[1], row(1), w, "Size", "%",
+        cropSizeSlider = addRenderableWidget(new StepSlider(colX[2], row(2), w, "Size", "%",
                 Config.MARKER_SIZES, Config.cropMarkerSize, 2, v -> Config.cropMarkerSize = v,
                 "Size of the check marks in percent of the default."));
         cropOpacitySlider.active = Config.cropMarkers;
         cropSizeSlider.active = Config.cropMarkers;
-        endGroup(1);
-
-        group(2, "Shield");
-        addRenderableWidget(CycleButton.onOffBuilder(Config.smallShield)
-                .withTooltip(v -> Tooltip.create(Component.literal(
-                        "Draws a shield in the left hand smaller while you are not blocking, so it does not cover the screen.")))
-                .create(colX[2], row(2), w, 20, Component.literal("Smaller Shield"), (b, v) -> {
-                    Config.smallShield = v;
-                    shieldSlider.active = v;
-                }));
-        shieldSlider = addRenderableWidget(new StepSlider(colX[2], row(2), w, "Size", "%",
-                Config.SHIELD_SCALES, Config.shieldScale, 3, v -> Config.shieldScale = v,
-                "Size of the idle shield in percent of the normal one."));
-        shieldSlider.active = Config.smallShield;
         endGroup(2);
 
         group(2, "Mob Health Bars");
@@ -167,6 +170,35 @@ public class ConfigScreen extends Screen {
         barRangeSlider.active = Config.mobHealthBars;
         barOpacitySlider.active = Config.mobHealthBars;
         endGroup(2);
+
+        group(1, "Sleep");
+        addRenderableWidget(CycleButton.onOffBuilder(Config.realisticSleep)
+                .withTooltip(v -> Tooltip.create(Component.literal(
+                        "The night is not skipped but passes fast while you sleep: crops and sugar cane grow, "
+                                + "furnaces smelt, mobs live on. Singleplayer only.")))
+                .create(colX[1], row(1), w, 20, Component.literal("Realistic Sleep"), (b, v) -> {
+                    Config.realisticSleep = v;
+                    nightSlider.active = v;
+                    sleepCameraButton.active = v;
+                    dangersButton.active = v;
+                }));
+        nightSlider = addRenderableWidget(new StepSlider(colX[1], row(1), w, "Night Length", "s",
+                Config.NIGHT_LENGTHS, Config.nightLength, 1, v -> Config.nightLength = v,
+                "How many real seconds a whole night takes while you sleep. A slow computer may need longer."));
+        sleepCameraButton = addRenderableWidget(CycleButton.onOffBuilder(Config.sleepCamera)
+                .withTooltip(v -> Tooltip.create(Component.literal(
+                        "In bed the camera goes outside, so you watch the night turn into day. "
+                                + "It stays in bed if there is no open sky nearby.")))
+                .create(colX[1], row(1), w, 20, Component.literal("Sleep Camera"), (b, v) -> Config.sleepCamera = v));
+        dangersButton = addRenderableWidget(CycleButton.onOffBuilder(Config.nightDangers)
+                .withTooltip(v -> Tooltip.create(Component.literal(
+                        "Monsters that can walk up to your bed (an open door, a hole in the wall) may find you "
+                                + "in your sleep. A hissing creeper wakes you at once. Off: monsters leave sleepers alone.")))
+                .create(colX[1], row(1), w, 20, Component.literal("Night Dangers"), (b, v) -> Config.nightDangers = v));
+        nightSlider.active = Config.realisticSleep;
+        sleepCameraButton.active = Config.realisticSleep;
+        dangersButton.active = Config.realisticSleep;
+        endGroup(1);
 
         addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, b -> onClose())
                 .bounds(width / 2 - 100, height - 28, 200, 20)

@@ -22,6 +22,8 @@ public final class Config {
     public static final int[] OPACITIES = {20, 30, 40, 50, 60, 70, 80, 90, 100};
     // selectable sizes of crop markers, percent
     public static final int[] MARKER_SIZES = {50, 75, 100, 125, 150, 200};
+    // selectable real durations of a whole night while sleeping, seconds
+    public static final int[] NIGHT_LENGTHS = {10, 20, 30, 45, 60};
 
     public static boolean realisticThunder = true;
     public static int soundSpeed = 300;
@@ -38,6 +40,10 @@ public final class Config {
     public static int cropMarkerSize = 100;
     public static WeatherFrequency rainFrequency = WeatherFrequency.DEFAULT;
     public static WeatherFrequency thunderFrequency = WeatherFrequency.DEFAULT;
+    public static boolean realisticSleep = true;
+    public static int nightLength = 20;
+    public static boolean sleepCamera = true;
+    public static boolean nightDangers = false;
 
     private static final Path FILE = FabricLoader.getInstance().getConfigDir().resolve("deathlyhallows.properties");
 
@@ -73,6 +79,10 @@ public final class Config {
         cropMarkerSize = MARKER_SIZES[indexOf(MARKER_SIZES, parseInt(p.getProperty("cropMarkerSize")), 2)];
         rainFrequency = WeatherFrequency.parse(p.getProperty("rainFrequency"));
         thunderFrequency = WeatherFrequency.parse(p.getProperty("thunderFrequency"));
+        realisticSleep = Boolean.parseBoolean(p.getProperty("realisticSleep", "true"));
+        nightLength = NIGHT_LENGTHS[indexOf(NIGHT_LENGTHS, parseInt(p.getProperty("nightLength")), 1)];
+        sleepCamera = Boolean.parseBoolean(p.getProperty("sleepCamera", "true"));
+        nightDangers = Boolean.parseBoolean(p.getProperty("nightDangers", "false"));
     }
 
     public static void save() {
@@ -92,6 +102,10 @@ public final class Config {
         p.setProperty("cropMarkerSize", Integer.toString(cropMarkerSize));
         p.setProperty("rainFrequency", rainFrequency.name());
         p.setProperty("thunderFrequency", thunderFrequency.name());
+        p.setProperty("realisticSleep", Boolean.toString(realisticSleep));
+        p.setProperty("nightLength", Integer.toString(nightLength));
+        p.setProperty("sleepCamera", Boolean.toString(sleepCamera));
+        p.setProperty("nightDangers", Boolean.toString(nightDangers));
         try {
             Files.createDirectories(FILE.getParent());
             try (Writer w = Files.newBufferedWriter(FILE)) {
